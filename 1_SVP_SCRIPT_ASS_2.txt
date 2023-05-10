@@ -1,0 +1,126 @@
+#########################################################################################
+#######     STEP-1 (S1):  CREAZIONE: REPOSITORY, PROGETTO IN LOCALE, IntegerToRomain_3     #######
+#########################################################################################
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ !!!!  CONTROLLARE SE SONO ELIMINATI TUTTI PROJECT BOARD
++ !!!!  CREARE REPOSITORY  "Assignment_2"  
++ !!!!  CREARE PROGETTO   "Number converter" 
++ !!!!  CAMBIARE STATO "visibility" DEL PROJECT BOARD PER "pubblico"  
++ !!!!  AGGIUNGERE COLLABORATORE S2 AL REPOSITORY 
++ !!!!  CREARE "MILESTONE 1"    (???  quanti  servono)
++ ????  CREARE ACTION ???
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    cd C:\Users\NADIYA\Desktop\BBB
+    rd /s /q C:\Users\NADIYA\Desktop\BBB	 
+    cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2
+    rd /s /q C:\Users\NADIYA\Desktop\ASSIGNMENT_2
+
+mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+    del  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\App.java
+    del  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\AppTest.java
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_pom.xml            C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\pom.xml
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle.xml   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\checkstyle.xml
+    cd  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
+
+git init
+git remote add origin https://github.com/Dmitry358/Assignment_2.git   
+git add .
+git commit -m "Commit iniziale"
+
+##    gh issue create  --title " ISSUE_1 "  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title " ISSUE_2 "  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title " ISSUE_3 "  --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1"
+
++++++++++++++++++++++++++++++++++++++++++++++++
++ !!!!  AGGIUNGERE "issue_1,2,3" NEL PROJECT BOARD  
++ !!!!  SPOSTARE "issue_1,2,3" NEL "In progress"  
++++++++++++++++++++++++++++++++++++++++++++++++
+
+git checkout -b develop
+git checkout -b  IntegerToRomain_3_num
+
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_3.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_3Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
+
+## ??? FARE BUILD
+
+git add .
+git commit -m "Realizzato IntegerToRomain_3_num"
+git checkout develop
+git merge IntegerToRomain_3_num
+git push origin --all
+
+
+###########################################
+#######     STEP-2 (S2):  RomanPrinter_3     #######
+########################################### 
+
+
+    cd C:\Users\NADIYA\Desktop\BBB
+    mkdir C:\Users\NADIYA\Desktop\BBB\roman-number
+    cd C:\Users\NADIYA\Desktop\BBB\roman-number
+	 
+git init
+git remote add origin https://github.com/Dmitry358/Assignment_2.git
+git pull origin master
+git checkout -b develop 
+git pull origin develop
+git checkout -b  RomanPrinter_3_num 
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\RP_3.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\RP_3Test.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java
+
+## ??? FARE BUILD
+
+git add .
+git commit -m "Realizzato Converter_3_num close #1"
+git checkout develop
+git merge RomanPrinter_3_num
+
+#git release???
+
+git checkout master
+git merge develop
+git push origin --all
+
+
+##############################################
+#######     STEP-3 (S1):  IntegerToRomain_6     #######
+##############################################
+
+
+    cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
+git pull origin develop
+git checkout master
+git pull origin master
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+    rm -rf C:/Users/NADIYA/Desktop/Assignment_2/*
+
+    rm -Rf .git
+
+
+
+copy  /Y  C:\Users\NADIYA\Desktop\App1.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_1\---.java
+
+
+/////// cd target\classes\it\unipd\mtss
+
+//////// java -classpath C:\Users\NADIYA\Desktop\prb\proba-app\target\classes it.unipd.mtss.App
+java -classpath C:\Users\NADIYA\Desktop\CODICE_ASS2\target\classes org.example.App
+
+ java -classpath C:\Users\NADIYA\Desktop\PROBA_ASS_2\roman-number\target\classes it.unipd.mtss.App
+
+//////// cd C:\Users\NADIYA\Desktop\prb\proba-app
+

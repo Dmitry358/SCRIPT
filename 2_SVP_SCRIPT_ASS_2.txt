@@ -1,0 +1,96 @@
+###########################################################
+#######    STEP-1 (S1)     #######
+###########################################################
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ !!!!  CONTROLLARE SE SONO ELIMINATI TUTTI PROJECT BOARD
++ !!!!  CREARE REPOSITORY "Assignment_2"  
++ !!!!  CREARE PROGETTO    "Number converter" 
++ !!!!  CAMBIARE STATO "visibility" DEL PROJECT BOARD PER "pubblico"  
++ !!!!  AGGIUNGERE COLLABORATORE S2 AL REPOSITORY 
++ !!!!  CREARE "MILESTONE 1"    (???  quanti  servono)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+     
+     cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2
+     rd /s /q C:\Users\NADIYA\Desktop\ASSIGNMENT_2
+
+mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+     del C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\App.java
+     del C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\AppTest.java
+     cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
+
+git init
+
+### !!!!DA SOSTITUIRE PER Assignment_2
+git remote add origin https://github.com/Dmitry358/aaa.git   
+
+git add .
+git commit -m "Commit iniziale"
+     gh issue create  --title " ISSUE_1 "  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+     gh issue create  --title " ISSUE_2 "  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title " ISSUE_3 "  --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1"
+git checkout -b develop
+git push origin --all
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ !!!!  AGGIUNGERE "issue_1,2,3" NEL PROJECT BOARD  
++ !!!!  SPOSTARE "issue_1,2,3" NEL "In progress"  
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+git checkout -b ITR_3_numeri
+
+     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\SOURCE_FILES\ITR_3.java    C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
+     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\TEST_FILES\ITR_3Test.java  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
+
+
+##########################################################
+#######    STEP-2 (S2)      #######
+########################################################## 
+
+## ?? DA DECIDERE SE SVOUTARE O RICREARE LA CARTELLA "ASSIGNMENT_2\roman-number"
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ !!!!  ENTRARE NELLA CARTELLA "ASSIGNMENT_2\roman-number"
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+##     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\SOURCE_FILES\RP_3.java     C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java
+##     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\TEST_FILES\RP_3Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+    rm -rf C:/Users/NADIYA/Desktop/Assignment_2/*
+
+    rm -Rf .git
+
+
+
+copy  /Y  C:\Users\NADIYA\Desktop\App1.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_1\---.java
+
+
+/////// cd target\classes\it\unipd\mtss
+
+//////// java -classpath C:\Users\NADIYA\Desktop\prb\proba-app\target\classes it.unipd.mtss.App
+java -classpath C:\Users\NADIYA\Desktop\CODICE_ASS2\target\classes org.example.App
+
+ java -classpath C:\Users\NADIYA\Desktop\PROBA_ASS_2\roman-number\target\classes it.unipd.mtss.App
+
+//////// cd C:\Users\NADIYA\Desktop\prb\proba-app
+
