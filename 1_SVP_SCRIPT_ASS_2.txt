@@ -106,21 +106,15 @@ git pull origin master
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 
-    rm -rf C:/Users/NADIYA/Desktop/Assignment_2/*
+#    rm -rf C:/Users/NADIYA/Desktop/Assignment_2/*
+#    rm -Rf .git
+# copy  /Y  C:\Users\NADIYA\Desktop\App1.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_1\---.java
 
-    rm -Rf .git
+#/////// cd target\classes\it\unipd\mtss
 
+#//////// java -classpath C:\Users\NADIYA\Desktop\prb\proba-app\target\classes it.unipd.mtss.App
+#java -classpath C:\Users\NADIYA\Desktop\CODICE_ASS2\target\classes org.example.App
+# java -classpath C:\Users\NADIYA\Desktop\PROBA_ASS_2\roman-number\target\classes it.unipd.mtss.App
 
-
-copy  /Y  C:\Users\NADIYA\Desktop\App1.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_1\---.java
-
-
-/////// cd target\classes\it\unipd\mtss
-
-//////// java -classpath C:\Users\NADIYA\Desktop\prb\proba-app\target\classes it.unipd.mtss.App
-java -classpath C:\Users\NADIYA\Desktop\CODICE_ASS2\target\classes org.example.App
-
- java -classpath C:\Users\NADIYA\Desktop\PROBA_ASS_2\roman-number\target\classes it.unipd.mtss.App
-
-//////// cd C:\Users\NADIYA\Desktop\prb\proba-app
+#//////// cd C:\Users\NADIYA\Desktop\prb\proba-app
 
