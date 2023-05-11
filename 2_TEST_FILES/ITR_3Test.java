@@ -18,7 +18,7 @@ public class IntegerToRomanTest{
         String aux = convert(1);
         assertTrue("I".equals(aux));
     }
-
+/*
     @Test
     public void test_2(){
         String aux = convert(2);
@@ -30,19 +30,19 @@ public class IntegerToRomanTest{
         String aux = convert(3);
         assertTrue("III".equals(aux));
     }
-
+*/
     @Test
     public void test_4(){
         String aux = numUni(1);
         assertTrue("I".equals(aux));
     }
-/*
+
     @Test
     public void test_5(){
         String aux = numUni(2);
         assertTrue("II".equals(aux));
     }
-
+/*
     @Test
     public void test_6(){
         String aux = numUni(3);

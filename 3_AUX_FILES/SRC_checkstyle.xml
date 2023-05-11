@@ -17,8 +17,8 @@
 	<module name="LineLength"/>
 	<module name="FileTabCharacter"/>
 	
-	<!-- module name="Header">
-		<property name="headerFile" value="// proba"/>
+    <module name="Header">
+        <property name="header" value="////////////////////////////////////////////////////////////////////\n// Giulia Doria 2021561\n// Dmitry Pluzhnikov 1169886\n////////////////////////////////////////////////////////////////////"/>
 		<property name="fileExtensions" value="java"/>
-	</module -->
+    </module>
 </module>

@@ -7,11 +7,6 @@ package it.unipd.mtss;
 
 import java.lang.String;
 
-import java.io.IOException; //TEMPORANEO
-import java.util.Scanner;
-import java.io.File; //TEMPORANEO
-import java.io.PrintWriter; //TEMPORANEO
-
 public class IntegerToRoman{
 /*
     public static void main( String[] args ) {
