@@ -1,3 +1,8 @@
+////////////////////////////////////////////////////////////////////
+// Giulia Doria 2021561
+// Dmitry Pluzhnikov 1169886
+////////////////////////////////////////////////////////////////////
+
 package it.unipd.mtss;
 
 import java.lang.String;
@@ -8,18 +13,12 @@ import java.io.File; //TEMPORANEO
 import java.io.PrintWriter; //TEMPORANEO
 
 public class IntegerToRoman{
-
+/*
     public static void main( String[] args ) {
-
-        //stampaInFile();
-        Scanner in = new Scanner(System.in);
-        System.out.print("\nINSERISCI NUMERO: ");
-        int num = in.nextInt();
-        in.close();
-
-        numUni(num);
-        System.out.print("\n");
+        convert(2);
+        //System.out.print("\n");
     }
+    */
     public static String convert(int number){
        return numUni(number);
    }

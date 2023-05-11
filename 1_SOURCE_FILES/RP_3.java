@@ -1,25 +1,28 @@
+////////////////////////////////////////////////////////////////////
+// Giulia Doria 2021561
+// Dmitry Pluzhnikov 1169886
+////////////////////////////////////////////////////////////////////
+
 package it.unipd.mtss;
 
 public class RomanPrinter {
-   //metod
-    public static void main(String[] args) {
-        printAsciiArt2("I");
+
+    public static String printAsciiArt(String romanNumber) {
+        if (romanNumber == "I") {
+            return "I";
+        }
+        return "II";
     }
-   
+
+/*
+
    //metod
    public static String print(int num) {
        return printAsciiArt(IntegerToRoman.convert(num));
    }
    
-   //metod
-   private static String printAsciiArt(String romanNumber) {
-       if (romanNumber == "I") {
-           System.out.printf("a " + " _____ ");
-           System.out.printf("|_   _|");
-       }
-       //TODO
-       return null;
-   }
+
+
 
     //metod
     public static void printAsciiArt2(String romanNumber) {
@@ -32,7 +35,8 @@ public class RomanPrinter {
             System.out.printf(" |_____|\n");
             
         }
-        //TODO
+
 
     }
+*/
 }
