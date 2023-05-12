@@ -11,6 +11,9 @@ copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\checkstyle.xml C:\Use
 
 copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\pom.xml C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_pom.xml
 
+copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\build.yml  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\build.yml
+
+
 
 git add . 
 git commit -m ""
