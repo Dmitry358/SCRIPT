@@ -1,0 +1,2 @@
+1. aggiungere??   <failOnViolation>true</failOnViolation>   nel checkstyle.xml?
+2. checkstyle non controlla header nei file di TEST

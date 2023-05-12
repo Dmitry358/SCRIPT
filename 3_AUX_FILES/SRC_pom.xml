@@ -112,13 +112,17 @@
              <artifactId>jacoco-maven-plugin</artifactId>
              <version>0.8.8</version>
              <executions>
-                 <execution>
+                
+				
+				<execution>
                      <id>prepare-agent</id>
                      <goals>
                          <goal>prepare-agent</goal>
                      </goals>
                  </execution>
-                 <execution>
+
+                 
+				 <execution>
                      <id>check</id>
                      <goals>
                          <goal>check</goal>
@@ -138,16 +142,20 @@
                          </rules>
                      </configuration>
                  </execution>
-                 <execution>
+                 
+				 
+				 <execution>
                      <id>report</id>
                      <phase>prepare-package</phase>
                      <goals>
                          <goal>report</goal>
                      </goals>
                  </execution>
-             </executions>
+             
+			 
+			 </executions>
          </plugin>		   
 		   
-       </plugins>	
+     </plugins>	
   </build>
 </project>

@@ -15,6 +15,7 @@ public class IntegerToRomanTest{
 
     @Test
     public void test_1(){
+        IntegerToRoman a = new IntegerToRoman();
         String aux = convert(1);
         assertTrue("I".equals(aux));
     }

@@ -13,6 +13,7 @@ public class RomanPrinterTest {
 
     @Test
     public void test_1(){
+        RomanPrinter a = new RomanPrinter();//
         String aux = printAsciiArt("I");
         assertTrue("I".equals(aux));
     }
