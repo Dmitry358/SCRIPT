@@ -26,8 +26,9 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
-    <reporting>
+    
+	<!-- DA VEDERE SE SERVE --> 
+    <!--reporting>
         <plugins>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -41,7 +42,7 @@
                 </reportSets>
             </plugin>
         </plugins>
-    </reporting>
+    </reporting-->
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -88,6 +89,7 @@
       </plugins>
     </pluginManagement>
 	 <plugins>
+	 
            <plugin>
                <groupId>org.apache.maven.plugins</groupId>
                <artifactId>maven-checkstyle-plugin</artifactId>
@@ -107,12 +109,11 @@
                </executions>
            </plugin>
 
-         <plugin>
+           <plugin>
              <groupId>org.jacoco</groupId>
              <artifactId>jacoco-maven-plugin</artifactId>
              <version>0.8.8</version>
-             <executions>
-                
+             <executions>                
 				
 				<execution>
                      <id>prepare-agent</id>
@@ -120,7 +121,6 @@
                          <goal>prepare-agent</goal>
                      </goals>
                  </execution>
-
                  
 				 <execution>
                      <id>check</id>
@@ -141,8 +141,7 @@
                              </rule>
                          </rules>
                      </configuration>
-                 </execution>
-                 
+                 </execution>                 
 				 
 				 <execution>
                      <id>report</id>
@@ -150,11 +149,19 @@
                      <goals>
                          <goal>report</goal>
                      </goals>
-                 </execution>
-             
+                 </execution>             
 			 
 			 </executions>
-         </plugin>		   
+         </plugin>
+         
+         <plugin>
+			<groupId>org.eluder.coveralls</groupId>
+            <artifactId>coveralls-maven-plugin</artifactId>
+            <version>4.3.0</version>
+				<!--configuration>
+					<repoToken>yourcoverallsprojectrepositorytoken</repoToken>
+				</configuration-->
+		</plugin> 		 
 		   
      </plugins>	
   </build>
