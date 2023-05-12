@@ -1,3 +1,4 @@
+
 copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_3.java
 
 copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\RP_3.java
@@ -9,3 +10,7 @@ copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unip
 copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\checkstyle.xml C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle.xml
 
 copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\pom.xml C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_pom.xml
+
+
+git add . 
+git commit -m ""
