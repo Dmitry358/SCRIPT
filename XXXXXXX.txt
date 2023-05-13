@@ -3,24 +3,23 @@
     cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2
     rd /s /q C:\Users\NADIYA\Desktop\ASSIGNMENT_2
 
-mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false  
-#-DrepoToken=yourcoverallsproje
+mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 
     del  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\App.java
-    del  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\AppTest.java
+    del  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\AppTest.java    
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_pom.xml            C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\pom.xml
-    mkdir C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations
+    md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows    
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_build.yml   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\build.yml
+    md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations    
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle.xml   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations\checkstyle.xml
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_README.md   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\README.md    
+    md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\target\site\checkstyle
     cd  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
-
-
-
 
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_3.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_3Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
 
 mvn install
 
-####
 
-    del  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\target
+

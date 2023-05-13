@@ -3,13 +3,13 @@
 #########################################################################################
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ !!!!  CONTROLLARE SE SONO ELIMINATI TUTTI PROJECT BOARD
 + !!!!  CONTROLLARE CHE NON ESISTA REPOSITORY  "Assignment_2"   
-+ !!!!  CREARE REPOSITORY  "Assignment_2"  
-+ !!!!  CREARE PROGETTO   "Number converter" 
++ !!!!  CONTROLLARE SE SONO ELIMINATI TUTTI PROJECT BOARD
++ !!!!  CREARE REPOSITORY   "Assignment_2"  
++ !!!!  CREARE PROJECT BOARD   "Number converter" 
 + !!!!  CAMBIARE STATO "visibility" DEL PROJECT BOARD PER "pubblico"  
 + !!!!  AGGIUNGERE COLLABORATORE S2 AL REPOSITORY 
-+ !!!!  CREARE "MILESTONE 1"    (???  quanti  servono)
++ !!!!  CREARE "MILESTONE 1"
 + ????  CREARE ACTION ???
 + !!!! IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -22,18 +22,20 @@
 mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 
     del  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\App.java
-    del  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\AppTest.java
+    del  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\AppTest.java    
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_pom.xml            C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\pom.xml
-    md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows
+    md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows    
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_build.yml   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\build.yml
-    md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations
+    md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations    
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle.xml   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations\checkstyle.xml
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_README.md   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\README.md    
     cd  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
 
 git init
 git remote add origin https://github.com/Dmitry358/Assignment_2.git   
 git add .
 git commit -m "Commit iniziale"
+git push origin master
 
 ##    gh issue create  --title " ISSUE_1 "  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
 ##    gh issue create  --title " ISSUE_2 "  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
@@ -45,7 +47,7 @@ git commit -m "Commit iniziale"
 +++++++++++++++++++++++++++++++++++++++++++++++
 
 git checkout -b develop
-git checkout -b  IntegerToRomain_3_num
+git checkout -b  feature/IntegerToRomain_3_num
 
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_3.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_3Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
@@ -58,7 +60,7 @@ git checkout -b  IntegerToRomain_3_num
 git add .
 git commit -m "Realizzato IntegerToRomain_3_num"
 git checkout develop
-git merge IntegerToRomain_3_num
+git merge feature/IntegerToRomain_3_num
 git push origin --all
 
 
@@ -76,16 +78,17 @@ git remote add origin https://github.com/Dmitry358/Assignment_2.git
 git pull origin master
 git checkout -b develop 
 git pull origin develop
-git checkout -b  RomanPrinter_3_num 
+git checkout -b  feature/RomanPrinter_3_num 
+
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\RP_3.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\RP_3Test.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java
 
 ## ??? FARE BUILD
 
 git add .
-git commit -m "Realizzato Converter_3_num close #1"
+git commit -m "Realizzato IntegerToRoman_3_num close #1"
 git checkout develop
-git merge RomanPrinter_3_num
+git merge feature/RomanPrinter_3_num
 
 #git release???
 

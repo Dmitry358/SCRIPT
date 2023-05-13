@@ -28,7 +28,7 @@
   </dependencies>
     
 	<!-- DA VEDERE SE SERVE --> 
-    <reporting>
+    <!--reporting>
         <plugins>
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -43,7 +43,7 @@
                 </reportSets>
             </plugin>
         </plugins>
-    </reporting>
+    </reporting-->
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -99,6 +99,8 @@
                    <failsOnError>true</failsOnError>
                    <configLocation>configurations/checkstyle.xml</configLocation>
                    <consoleOutput>true</consoleOutput>
+				   <!--includeTestSourceDirectory>true</includeTestSourceDirectory-->
+				   <!--outputFile>target/site/checkstyle</outputFile-->
                </configuration>
                <executions>
                    <execution>
