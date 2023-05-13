@@ -33,6 +33,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.8</version>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -120,9 +121,23 @@
                      <goals>
                          <goal>prepare-agent</goal>
                      </goals>
+					 <configuration>
+					     <append>false</append>
+					 </configuration>
                  </execution>
                  
 				 <execution>
+                     <id>report</id>
+                     <phase>prepare-package</phase>
+                     <goals>
+                         <goal>report</goal>
+                     </goals>
+					 <configuration>
+					     <formats>HTML</formats>
+					 </configuration>
+                 </execution> 
+
+                 <execution>
                      <id>check</id>
                      <goals>
                          <goal>check</goal>
@@ -141,18 +156,19 @@
                              </rule>
                          </rules>
                      </configuration>
-                 </execution>                 
-				 
-				 <execution>
-                     <id>report</id>
-                     <phase>prepare-package</phase>
-                     <goals>
-                         <goal>report</goal>
-                     </goals>
-                 </execution>             
+                 </execution> 				 
 			 
 			 </executions>
          </plugin>
+         
+         <!--plugin>
+			<groupId>org.eluder.coveralls</groupId>
+            <artifactId>coveralls-maven-plugin</artifactId>
+            <version>4.3.0</version>
+				<configuration>
+					<repoToken>yourcoverallsprojectrepositorytoken</repoToken>
+				</configuration>
+		</plugin--> 		 
 		   
      </plugins>	
   </build>

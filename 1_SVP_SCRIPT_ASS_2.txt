@@ -11,6 +11,7 @@
 + !!!!  AGGIUNGERE COLLABORATORE S2 AL REPOSITORY 
 + !!!!  CREARE "MILESTONE 1"    (???  quanti  servono)
 + ????  CREARE ACTION ???
++ !!!! IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     cd C:\Users\NADIYA\Desktop\BBB
@@ -50,6 +51,9 @@ git checkout -b  IntegerToRomain_3_num
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_3Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
 
 ## ??? FARE BUILD
++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ !!!! IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 git add .
 git commit -m "Realizzato IntegerToRomain_3_num"
