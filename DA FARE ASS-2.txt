@@ -1,4 +1,5 @@
 !!!! CACHING MAVEN ACTIONS
 !!!! SISTEMARE ETICHETTA BUILD NEL README.MD
+!! mettere "CLOSE #ID" nei commits
 1. aggiungere??   <failOnViolation>true</failOnViolation>   nel checkstyle.xml?
-
+!!
