@@ -1,5 +1,7 @@
+!!!! ATTIVARE COVERALLS IN LOCALE
 !!!! CACHING MAVEN ACTIONS
-!!!! SISTEMARE ETICHETTA BUILD NEL README.MD
+!!!! SISTEMARE ETICHETTA CHECKSTYLE NEL README.MD
 !! mettere "CLOSE #ID" nei commits
 1. aggiungere??   <failOnViolation>true</failOnViolation>   nel checkstyle.xml?
-!!
+!! perche fa doppio ACTION su commit iniziale?
+??? eliminare cartella ".github/badges"

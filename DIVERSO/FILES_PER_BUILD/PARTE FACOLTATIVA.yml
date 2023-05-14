@@ -1,0 +1,32 @@
+        - name: PARTE FAOLTATIVA
+          run: echo "--------- PARTE FAOLTATIVA -----------"
+          
+        - name: Generate JaCoCo Badge
+          id: jacoco
+          uses: cicirello/jacoco-badge-generator@v2.6.1
+          with:
+            generate-branches-badge: true
+            jacoco-csv-file: target/site/jacoco/jacoco.csv
+            badges-directory: .github/badges
+            
+        - name: GIT STATUS
+          run: |
+            echo "--------- ls -----------"
+            ls
+            echo "--------- git status -----------"
+            git status
+            
+        - name: Add badges
+          run: git add .github/badges
+
+        - name: Commit files
+          run: |
+            git config --global user.name 'github-actions'
+            git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m "Added coverage badges" -a || true
+            
+        - name: Push changes
+          uses: ad-m/github-push-action@master
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            branch: ${{ github.head_ref }}

@@ -162,15 +162,54 @@
 			 
 			 </executions>
          </plugin>
+
+         <!--plugin>
+             <groupId>org.eluder.coveralls</groupId>
+             <artifactId>coveralls-maven-plugin</artifactId>
+             <version>4.3.0</version>
+             <configuration>
+                 <repoToken>target/site/coveralls</repoToken>
+             </configuration>
+             <dependencies>
+                 <dependency>
+                     <groupId>javax.xml.bind</groupId>
+                     <artifactId>jaxb-api</artifactId>
+                     <version>2.3.1</version>
+                 </dependency>
+             </dependencies>
+         </plugin-->
          
          <!--plugin>
 			<groupId>org.eluder.coveralls</groupId>
             <artifactId>coveralls-maven-plugin</artifactId>
             <version>4.3.0</version>
-				<configuration>
-					<repoToken>yourcoverallsprojectrepositorytoken</repoToken>
-				</configuration>
-		</plugin--> 		 
+             <executions>
+                 <execution>
+                     <goals>
+                         <goal>prepare-agent</goal>
+                     </goals>
+                     <configuration>
+                         <append>false</append>
+                     </configuration>
+                 </execution>
+                 <execution>
+                     <id>report</id>
+                     <goals>
+                         <goal>report</goal>
+                     </goals>
+                     <configuration>
+                         <repoToken>target/site/coveralls</repoToken>
+                     </configuration>
+                 </execution>
+
+                 <execution>
+                     <id>check</id>
+                     <goals>
+                         <goal>check</goal>
+                     </goals>
+                 </execution>
+             </executions>
+		</plugin-->
 		   
      </plugins>	
   </build>
