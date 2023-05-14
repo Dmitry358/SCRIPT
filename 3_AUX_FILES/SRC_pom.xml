@@ -99,7 +99,7 @@
                    <failsOnError>true</failsOnError>
                    <configLocation>configurations/checkstyle.xml</configLocation>
                    <consoleOutput>true</consoleOutput>
-				   <!--includeTestSourceDirectory>true</includeTestSourceDirectory-->
+				   <includeTestSourceDirectory>true</includeTestSourceDirectory>
 				   <!--outputFile>target/site/checkstyle</outputFile-->
                </configuration>
                <executions>

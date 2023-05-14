@@ -1,4 +1,4 @@
-name: Build with Maven
+name: Checkstyle
 on: [push]
 
 jobs:
@@ -14,9 +14,6 @@ jobs:
             distribution: 'temurin'
             java-version: 11
             cache: 'maven'
-        
-        - name: BUILD WITH MAVEN
-          run: mvn -B install --file pom.xml
             
-        #- name: LAUNCH JACOCO
-        #  run: mvn jacoco:prepare-agent install jacoco:report
+        - name: BUILD WITH MAVEN
+          run: mvn --batch-mode --update-snapshots checkstyle:check

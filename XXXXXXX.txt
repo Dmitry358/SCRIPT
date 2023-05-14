@@ -13,7 +13,10 @@ mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -Darche
     md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations    
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle.xml   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations\checkstyle.xml
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_README.md   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\README.md    
-    md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\target\site\checkstyle
+    ###########    
+##    md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\target\site\checkstyle
+##    ATTRIB  -R C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\target\site\checkstyle /D
+    ###########
     cd  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
 
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_3.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java

@@ -6,7 +6,7 @@
 package it.unipd.mtss;
 
 import static it.unipd.mtss.RomanPrinter.printAsciiArt;
-import static org.junit.Assert.*; //DA CHIARIRE SE SERVE
+import static org.junit.Assert.assertTrue; //DA CHIARIRE SE SERVE
 import org.junit.Test;
 
 public class RomanPrinterTest {
