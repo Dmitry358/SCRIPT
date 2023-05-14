@@ -1,0 +1,101 @@
+- !!! METODI OBBLIGATORIAMENTE DEVONO LANCIARE ECCEZIONI
+- !!! BISOGNA TESTARE SOLO FUNZIONE ESTERNA O ANCHE FUNZ ANNIDATE
+- !!! GUARDARE FILE "CRITERI DI CORREZIONE"
+- !!!!! PUO MANCARE PARTE ARRANGE NEL TEST?
+- !! COVERALLS si puo girare in locale?
+- !!!!! COME FARE IL TEST PER TUTTI I NUMERI???
+- !!!! FASE "Build Automation": SE FALLISCE SOLO CHECKSTYLE, BUILD DEVE FALLIRE?
+- !!!! se chiamo nel build.yml "mvn install --pom.xml" è RIDONDANTE "#  run: mvn jacoco:prepare-agent install jacoco:report" nel BUILD.YML (ed anche file CHECKSTYLE.YML)
+-??? COME TESTARE IL COSTRUTTORE
+-?? va bene lanciare ACTIONS solo nel PUSH su MASTER o su TUTTI rami?
+- bisogna fare CHECKSTYLE su files di TEST?
+- files BUILD.YML possono essere diversi su diversi BRANCH?
+- devono essere header nei file di test?
+- bisogna versionare .gitignore?
+-?? HEADER bisogna compilare in modo sicuro?
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-?? HEADER deve essere nel POM e CHECKSTYLE?
+-?? devo consegnare file di impostazioni GithubActions esplicitamente?
+-?- posso testare metodo stampa con arrays
+-??? c'è elenco di parametri per quali si corregge il progetto
+-? possiamo suddividere attivita: printer e converter? 
+
++- metodi di test devono essere sempre "void"?
++++- classi di Test possono non avere metodo Main?
+++- è sbagliato versare file "gitignore"
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+###  VCS:
+-? è sbagliato versare file "gitignore"
+//-QUALI FILE BISOGNA VERSARE ALLA FINE?
+//- serve creare ramo release o da develop si puo direttamente push  nel main
+//- bisogna fare release e push master per ogni versione (num3, num6 ecc)???
+//- nomi di featurebranch devono essere parlanti?
++- commit intermedi possono non avere ID ISSUE (cioè solo quelli di release?)
+
+-------------------------------------------------------------------------------------------------------
+###  CODICE:
++- [1] "Le  attività  devono  essere  sviluppate  (compresi  i  test  di  unità)  una  per  volta  senza  tenere  in
+    considerazione le attività successive": si intende prima nuero 3, dopo 6 ecc?
+
+//- header deve essere in tutti files, anche di test?
+//- quanto corretto deve funzionare il codice (se mi scappano casi particolari tipo stringa vuota ecc)
+
++- metodi di test devono essere sempre "void"?
++- classi di Test possono non avere metodo Main?
+//- se sbaglio nelle partiopzionali perdo punti?
+
+-------------------------------------------------------------------------------------------------------
+###  Test di Unità:
+//?- come si testa classe di stampa
+//- bisogna sviluppare tutti tipologie di test (CORRECT) per ogni versione di codice (prima num3, poi num6 ecc)?
+
+-------------------------------------------------------------------------------------------------------
+###  Analisi statica:
+[3]- "effettuare  le  seguenti  verifiche  al  codice": solo questi  
++- Configurare il plugin in modo da far fallire la build se non vengono rispettati i controlli configurati. (plugin checkstyle?)
+
+-------------------------------------------------------------------------------------------------------
+###  Build Automation:
+[2] -? TIP vedi Jacoco e Coveralls: entrambi o basta 1?
+-?? devo consegnare file di impostazioni GithubActions esplicitamente?
+//- inGithub devo impostare macchian virtuale uguale alla mia locale? (e come fare se sviluppatori ne hanno diverse?)
+//- Build Automation: che attivita sono da fare di preciso?
+
+------------------------------------------------------------------------------------------------------
+###  CONSEGNA:
+-??? c'è elenco di parametri per quali si corregge il progetto
+
+-------------------------------------------------------------------------------------------------------
+## Project Automation:
+
+
+-------------------------------------------------------------------------------------------------------
+###  ITS: 
++- ITS: "registrare la nuova versione" ??
+
+
+
+##########################################################################################
+- credenziali privati?
+- che compiti bisogna sudduvidere fra sviluppatori?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------- DOMANDE INTERNE --------------------------------------------------------

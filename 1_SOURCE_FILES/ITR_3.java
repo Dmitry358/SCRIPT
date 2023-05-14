@@ -8,12 +8,7 @@ package it.unipd.mtss;
 import java.lang.String;
 
 public class IntegerToRoman{
-/*
-    public static void main( String[] args ) {
-        convert(2);
-        //System.out.print("\n");
-    }
-    */
+
     public static String convert(int number){
        return numUni(number);
    }
@@ -21,7 +16,6 @@ public class IntegerToRoman{
 //!!!!!! REALIZZARE FUNZIONE DI CONTROLLO DI CORRETTEZZA DI INPUT
 
     public static String numUni(int num_uni){
-        //System.out.printf("  Uni:");
         String aux="";
         switch (num_uni){
             case (1): aux="I"; break;

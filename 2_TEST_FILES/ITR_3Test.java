@@ -5,6 +5,7 @@
 
 package it.unipd.mtss;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static it.unipd.mtss.IntegerToRoman.convert;
@@ -13,17 +14,19 @@ import static org.junit.Assert.assertTrue;
 
 public class IntegerToRomanTest{
 
-    @Test
-    public void test_1(){
+    @Before
+    public void inizializzazione() {
         IntegerToRoman a = new IntegerToRoman();
+    }
+
+    @Test
+    public void testConvert_InputMinoreDiUno(){
         String aux = convert(1);
         assertTrue("I".equals(aux));
     }
 
-
-
     @Test
-    public void test_2(){
+    public void testConvert_InputMaggioreDiMille(){
         String aux = convert(2);
         assertTrue("II".equals(aux));
     }

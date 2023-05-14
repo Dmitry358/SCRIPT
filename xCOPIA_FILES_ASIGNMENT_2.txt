@@ -1,30 +1,32 @@
 
-##  IntegerToRoman  -->  ITR_3  ##
+1. ###  IntegerToRoman  -->  ITR_3  ###
 copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_3.java
 
-##  RomanPrinter  -->  RP_3  ##
+2. ###  RomanPrinter  -->  RP_3  ###
 copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\RP_3.java
 
-##  IntegerToRomanTest  -->  ITR_3Test  ##
+3. ###  IntegerToRomanTest  -->  ITR_3Test  ###
 copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_3Test.java
 
-##  RomanPrinterTest  -->  RP_3Test  ##
+4. ###  RomanPrinterTest  -->  RP_3Test  ###
 copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\RP_3Test.java
 
-##  checkstyle.xml  -->  SRC_checkstyle.xml  ##
-copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\checkstyle.xml C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle.xml
+5. ###  checkstyle.xml  -->  SRC_checkstyle.xml  ###
+copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations\checkstyle.xml C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle.xml
 
-##  pom.xml  -->  SRC_pom.xml  ##
+6. ###  pom.xml  -->  SRC_pom.xml  ###
 copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\pom.xml C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_pom.xml
 
-##  build.yml  -->  SRC_build.yml  ##
+7. ###  build.yml  -->  SRC_build.yml  ###
 copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\build.yml  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_build.yml
 
+8. ### checkstyle_workflow.yml --> SRC_checkstyle_workflow.yml  ###
+copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\checkstyle_workflow.yml  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle_workflow.yml
 
 
 cd C:\Users\NADIYA\Desktop\SCRIPT
 git add . 
-git commit -m ""
+git commit -m "xxxxx"
 
 git push origin master
 
