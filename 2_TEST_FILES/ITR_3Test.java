@@ -13,8 +13,10 @@ import static it.unipd.mtss.IntegerToRoman.numUni;
 import static org.junit.Assert.assertTrue;
 
 public class IntegerToRomanTest{
+    //TESTING: numUni, numDec, numCent, convert: <1; >1000;
+    // esempi ammissibili per partizoni
 
-    @Before
+    @Before//!!!!!!!!!!!!! SERVE???
     public void inizializzazione() {
         IntegerToRoman a = new IntegerToRoman();
     }

@@ -1,4 +1,4 @@
-
+- " sviluppare il progetto utilizzando l’approccio TDD" lo faccio con COMMIT prima test e poi versione aggiornata?
 -??? COME TESTARE IL COSTRUTTORE
 - !!!!!!!!! CON INPUT CORRETTO BISOGNA TESTARE TUTTI I NUMERI O SOLO ALCUNI A CASO??
 - !!!!??? per metodo "printAsciiArt" bisogna scartare input non sensato?? Deve lanciare eccezione?
