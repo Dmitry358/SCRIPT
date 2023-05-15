@@ -1,5 +1,7 @@
+
 -??? COME TESTARE IL COSTRUTTORE
--!!!!!!!!!??? per metodo "printAsciiArt" bisogna scartare input non sensato?? Deve lanciare eccezione?
+- !!!!!!!!! CON INPUT CORRETTO BISOGNA TESTARE TUTTI I NUMERI O SOLO ALCUNI A CASO??
+- !!!!??? per metodo "printAsciiArt" bisogna scartare input non sensato?? Deve lanciare eccezione?
 - !!! METODI OBBLIGATORIAMENTE DEVONO LANCIARE ECCEZIONI
 - !!! BISOGNA TESTARE SOLO FUNZIONE ESTERNA O ANCHE FUNZ ANNIDATE ausiliari
 - !!! GUARDARE FILE "CRITERI DI CORREZIONE"

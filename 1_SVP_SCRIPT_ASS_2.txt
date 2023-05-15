@@ -27,9 +27,13 @@ mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -Darche
     md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows    
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_build.yml         C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\build.yml
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle_workflow.yml         C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\checkstyle_workflow.yml
+
+###### ???? SERVE ????
     md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\badges
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_branches.svg  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\badges\branches.svg
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_jacoco.svg       C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\badges\jacoco.svg
+######
+
     md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations    
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle.xml  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations\checkstyle.xml
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_README.md   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\README.md    
@@ -54,7 +58,6 @@ git push origin master
 git checkout -b develop
 git checkout -b  feature/IntegerToRomain_3_num
 
-    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_3.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_3Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
 
 ## ??? FARE BUILD
@@ -63,7 +66,12 @@ git checkout -b  feature/IntegerToRomain_3_num
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 git add .
-git commit -m "Realizzato IntegerToRomain_3_num"
+git commit -m "Preparati test per classe IntegerToRomain versione 3 numeri"
+
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_3.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
+
+git add .
+git commit -m "Realizzata classe IntegerToRomain versione 3 numeri"
 git checkout develop
 git merge feature/IntegerToRomain_3_num
 git push origin --all

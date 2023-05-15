@@ -1,0 +1,7 @@
+md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\target\site\coveralls
+
+
+mvn coveralls:help -Ddetail=true
+
+
+mvn help:describe -DgroupId=org.apache.maven.plugins \   -DartifactId=maven-coveralls-plugin \    -Ddetail=true
