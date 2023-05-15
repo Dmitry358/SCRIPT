@@ -1,14 +1,16 @@
+-??? COME TESTARE IL COSTRUTTORE
+-!!!!!!!!!??? per metodo "printAsciiArt" bisogna scartare input non sensato?? Deve lanciare eccezione?
 - !!! METODI OBBLIGATORIAMENTE DEVONO LANCIARE ECCEZIONI
-- !!! BISOGNA TESTARE SOLO FUNZIONE ESTERNA O ANCHE FUNZ ANNIDATE
+- !!! BISOGNA TESTARE SOLO FUNZIONE ESTERNA O ANCHE FUNZ ANNIDATE ausiliari
 - !!! GUARDARE FILE "CRITERI DI CORREZIONE"
 - !!!!! PUO MANCARE PARTE ARRANGE NEL TEST?
 - !! COVERALLS si puo girare in locale?
 - !!!!! COME FARE IL TEST PER TUTTI I NUMERI???
 - !!!! FASE "Build Automation": SE FALLISCE SOLO CHECKSTYLE, BUILD DEVE FALLIRE?
 - !!!! se chiamo nel build.yml "mvn install --pom.xml" è RIDONDANTE "#  run: mvn jacoco:prepare-agent install jacoco:report" nel BUILD.YML (ed anche file CHECKSTYLE.YML)
--??? COME TESTARE IL COSTRUTTORE
+
 -?? va bene lanciare ACTIONS solo nel PUSH su MASTER o su TUTTI rami?
-- bisogna fare CHECKSTYLE su files di TEST?
+
 - files BUILD.YML possono essere diversi su diversi BRANCH?
 - devono essere header nei file di test?
 - bisogna versionare .gitignore?

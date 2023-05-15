@@ -7,14 +7,31 @@ package it.unipd.mtss;
 
 import static it.unipd.mtss.RomanPrinter.printAsciiArt;
 import static org.junit.Assert.assertTrue; //DA CHIARIRE SE SERVE
+
+import org.junit.Before;
 import org.junit.Test;
 
 public class RomanPrinterTest {
+//testPrintInConsole??
+    //romannumber == null
+    //romannumber == ""
+    //romannumber != I,V,X,L,C,D,M
+
+    @Before //SERVE??
+    public void inizializzazione() { //SERVE???
+        RomanPrinter a = new RomanPrinter();
+    }
 
     @Test
-    public void test_1(){
-        RomanPrinter a = new RomanPrinter();//
-        String aux = printAsciiArt("I");
+    public void testPrintAscciArt_I(){
+        printAsciiArt("I");
+    }
+
+    @Test
+    public void testPrintAsciiArt(){
+        String romaNumber = "I";
+        String expected = "";
+        String aux = printAsciiArt(romaNumber);
         assertTrue("I".equals(aux));
     }
 
@@ -23,6 +40,8 @@ public class RomanPrinterTest {
         String aux = printAsciiArt("II");
         assertTrue("II".equals(aux));
     }
+
+
 
     /*
     @Test
