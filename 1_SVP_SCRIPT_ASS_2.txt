@@ -16,7 +16,7 @@
 #+  !!!!  IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-##  !!!!! DA ELIMINARE per versione 2 SVILUPPATORI
+##  !!!!! DA ELIMINARE PER 2 SVILUPPATORI
     cd C:\Users\NADIYA\Desktop\BBB
     rd /s /q C:\Users\NADIYA\Desktop\BBB	 
 ##+++++++++++++++++++++++++++++++++++++++++
@@ -103,7 +103,7 @@ git push origin --all
 #+  !!!!  CONTROLLARE SE PRESENTE CARTELLA  "ASSIGNMENT_2"   !!!!! 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-##  !!!!! DA CMBIARE PATH per versione 2 SVILUPPATORI
+###  !!!!! CAMBIARE PATH PER 2 SVILUPPATORI
     cd C:\Users\NADIYA\Desktop\BBB
     mkdir C:\Users\NADIYA\Desktop\BBB\roman-number
     cd C:\Users\NADIYA\Desktop\BBB\roman-number
@@ -118,7 +118,7 @@ git checkout -b feature/versione_numeri_da_1_a_3
 git pull origin feature/versione_numeri_da_1_a_3
 git checkout -b  feature/RomanPrinter_3_num 
 
-##  !!!!! DA CMBIARE PATH per versione 2 SVILUPPATORI
+###  !!!!! CAMBIARE PATH PER 2 SVILUPPATORI
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\RP_3Test.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java
 
 git add .
@@ -199,28 +199,26 @@ git merge feature/IntegerToRomain_6_num
 git push origin feature/IntegerToRomain_6_num
 git push origin feature/versione_numeri_da_1_a_6
 
-##### !!!!!!  ARRIVATO QUI
 
 ###########################################################
 #######     STEP-2B (S2):   RomanPrinter_6 + VERSIONE_1-6    #######
 ########################################################### 
 
 
-##  !!!!! DA CAMBIARE PATH per versione 2 SVILUPPATORI
-    cd C:\Users\NADIYA\Desktop\BBB
-    mkdir C:\Users\NADIYA\Desktop\BBB\roman-number
+###  !!!!! CAMBIARE PATH PER 2 SVILUPPATORI
     cd C:\Users\NADIYA\Desktop\BBB\roman-number
-## ++++++++++++++++++++++++++++++++++++++++++++
-	 
 
+### ??? SERVE
+git pull origin master
 git checkout develop 
-## ??? SERVE
 git pull origin develop
-git checkout feature/versione_numeri_da_1_a_6
+#+++++++++++++++++++++++
+
+git checkout -b feature/versione_numeri_da_1_a_6
 git pull origin feature/versione_numeri_da_1_a_6
 git checkout -b  feature/RomanPrinter_6_num 
 
-##  !!!!! DA CMBIARE PATH per versione 2 SVILUPPATORI
+###  !!!!! CAMBIARE PATH PER 2 SVILUPPATORI
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\RP_6Test.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java
 
 git add .
@@ -229,10 +227,15 @@ git commit -m "Realizzati test per classe RomanPrinter versione d 1 a 6 numeri"
 ##  !!!!! DA CMBIARE PATH per versione 2 SVILUPPATORI
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\RP_6.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java
 
-### ??? FARE BUILD
     mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
 
 git add .
+
+### !!!!! SCRIVE NIENTE DA AGGIUNGERE PER COMMIT
+
 git commit -m "Realizzata classe RomanPrinter e VERSIONE_1-6 per numeri da 1 a 6 close #5 close #6"
 git checkout feature/versione_numeri_da_1_a_6
 git merge feature/RomanPrinter_6_num
