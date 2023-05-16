@@ -26,7 +26,7 @@ copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\che
 
 cd C:\Users\NADIYA\Desktop\SCRIPT
 git add . 
-git commit -m " Realizzati test per funzioni printAscii e print_I vers 3 numeri"
+git commit -m " xxx "
 
 git push 
 
