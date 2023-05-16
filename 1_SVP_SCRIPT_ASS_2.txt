@@ -38,23 +38,28 @@ mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -Darche
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_jacoco.svg       C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\badges\jacoco.svg
 ######
 
-### ISSUE_1
-##    gh issue create  --title "Realiazzare classe IntegerToRomain e test corrispondenti versione da 1 a 3 numeri"        --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
-### ISSUE_2
-##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 3 numeri"             --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
-### ISSUE_3 (???? SERVE ????)
-##    gh issue create  --title "Conclusione versione da 1 a 3 numeri"             --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
-
-
 git init
 git remote add origin https://github.com/Dmitry358/Assignment_2.git   
+
+### ISSUE_1
+    gh issue create  --title "Realiazzare classe IntegerToRomain e test corrispondenti versione da 1 a 3 numeri"  --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
+
+### ISSUE_2
+##  !!!!! DA CMBIARE PER "giuliadoria"
+    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 3 numeri"  --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
+
+### ISSUE_3 (???? SERVE ????)
+##  !!!!! DA CMBIARE PER "giuliadoria"
+    gh issue create  --title "Conclusione versione da 1 a 3 numeri"  --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
+
+
 git add .
 git commit -m "Commit iniziale"
 git push origin master
 
 #+++++++++++++++++++++++++++++++++++++++++++++
-#  !!!!  AGGIUNGERE "issue_1,2" NEL PROJECT BOARD  
-#  !!!!  SPOSTARE "issue_1,2" NEL "In progress"  
+#  !!!!  AGGIUNGERE "issue_1,2,3" NEL PROJECT BOARD  
+#  !!!!  SPOSTARE "issue_1,2,3" NEL "In progress"  
 #+++++++++++++++++++++++++++++++++++++++++++++
 
 git checkout -b develop
@@ -74,7 +79,6 @@ git commit -m "Realizzati test per classe IntegerToRomain versione da 1 a 3 nume
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_3.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
 
 git add .
-# !!!!! DA VEDERE SE SERVE "close#1"
 git commit -m "Realizzata classe IntegerToRomain versione da 1 a 3 numeri close #1"
 
 git checkout feature/versione_numeri_da_1_a_3
@@ -133,12 +137,21 @@ git push origin --all
 #######     STEP-2A (S1):  IntegerToRomain_6     #######
 ###############################################
 
-##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 6 numeri"  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
-##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 6 numeri"       --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+### ISSUE_4
+    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 6 numeri"  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+
+### ISSUE_5
+##  !!!!! DA CMBIARE PER "giuliadoria"
+    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 6 numeri"       --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
+
+### ISSUE_6
+##  !!!!! DA CMBIARE PER "giuliadoria"
+    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 6 numeri"       --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
+
 
 #++++++++++++++++++++++++++++++++++++++++++++++
-#  !!!!  AGGIUNGERE "issue_3,4" NEL PROJECT BOARD  
-#  !!!!  SPOSTARE "issue_3,4" NEL "In progress"  
+#+  !!!!  AGGIUNGERE "issue_4,5,6" NEL PROJECT BOARD  
+#+  !!!!  SPOSTARE "issue_4,5,6" NEL "In progress"  
 #++++++++++++++++++++++++++++++++++++++++++++++
 
     cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
@@ -148,7 +161,7 @@ git checkout develop
 git pull origin develop
 
 
-###
+#######   FINE SCRIPT   ######
 
 
 
