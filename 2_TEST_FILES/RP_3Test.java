@@ -10,9 +10,9 @@ import static it.unipd.mtss.RomanPrinter.print;
 import static it.unipd.mtss.RomanPrinter.printAsciiArt;
 import static it.unipd.mtss.RomanPrinter.print_I;
 
-import static org.junit.Assert.assertTrue; //DA CHIARIRE SE SERVE
+import static org.junit.Assert.assertTrue; 
 import org.junit.Test;
-//import org.junit.Before;
+
 
 public class RomanPrinterTest {
     //come testare STAMPA IN CONSOLE di "print_I" e "PrintAsciiArt"
