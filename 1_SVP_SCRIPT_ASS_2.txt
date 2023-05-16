@@ -306,7 +306,7 @@ git push origin feature/versione_numeri_da_1_a_10
 
 
 ##############################################################
-#######     STEP-2.2 (S2):   RomanPrinter_10 + VERSIONE_1-10    #######
+#######     STEP-3.2 (S2):   RomanPrinter_10 + VERSIONE_1-10    #######
 ############################################################## 
 
 
@@ -343,6 +343,60 @@ git merge develop
 git push origin --all
 
 
+############################################################################
+#######     STEP-4.1 (S1):  CREAZIONE VERSIONE_1-20  +  IntegerToRomain_20     #######
+############################################################################
+
+    ### ISSUE_10
+    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 20 numeri"  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+
+    ### ISSUE_11
+##  !!!!!!!!!! DA CMBIARE PER "giuliadoria"
+    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 20 numeri"  --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
+
+    ### ISSUE_12
+##  !!!!!!!!!! DA CMBIARE PER "giuliadoria"
+    gh issue create  --title "Rilascio versione convertitore da 1 a 20 numeri"   --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
+
+
+#++++++++++++++++++++++++++++++++++++++++++++++
+#+  !!!!  AGGIUNGERE "issue_10,11,12" NEL PROJECT BOARD  
+#+  ---  (FACOLTATIVO) "issue_10,11,12" NEL "In progress"  
+#++++++++++++++++++++++++++++++++++++++++++++++
+
+    cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
+git checkout master
+git pull origin master
+git checkout feature/versione_numeri_da_1_a_10
+git pull origin feature/versione_numeri_da_1_a_10
+git checkout develop
+git pull origin develop
+
+    mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+
+git checkout -b feature/versione_numeri_da_1_a_20
+git checkout -b  feature/IntegerToRomain_20_num
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_20Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
+git add .
+git commit -m "Realizzati test per classe IntegerToRomain versione da 1 a 20 numeri"
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_20.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
+
+    mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+
+git add .
+git commit -m "Realizzata classe IntegerToRomain versione da 1 a 20 numeri close #10"
+git checkout feature/versione_numeri_da_1_a_20
+git merge feature/IntegerToRomain_20_num
+git push origin feature/IntegerToRomain_20_num
+git push origin feature/versione_numeri_da_1_a_20
 
 
 
