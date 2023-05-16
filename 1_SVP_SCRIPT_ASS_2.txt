@@ -2,19 +2,25 @@
 #######     STEP-1A (S1):  CREAZIONE: REPOSITORY, PROGETTO IN LOCALE, IntegerToRomain_3     #######
 ###########################################################################################
 
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+  !!!!  PASSARE A GIULIA CARTELLA  "SCRIPT"
+#+  !!!!  GIULIA CREA CARTELLA  "ASSIGNMENT_2"
+#+  !!!!  CONTROLLARE SE PRESENTE CARTELLA DA ME "ASSIGNMENT_2"  
 #+  !!!!  CONTROLLARE CHE NON ESISTA REPOSITORY  "Assignment_2"   
 #+  !!!!  CONTROLLARE SE SONO ELIMINATI TUTTI PROJECT BOARD
 #+  !!!!  CREARE REPOSITORY   "Assignment_2"  
-#+  !!!!  CREARE PROJECT BOARD   "Number converter" 
+#+  !!!!  CREARE PROJECT BOARD   "Number converter"  NEL REPO  "Assignment_2"
 #+  !!!!  CAMBIARE STATO "visibility" DEL PROJECT BOARD PER "pubblico"  
 #+  !!!!  AGGIUNGERE COLLABORATORE S2 AL REPOSITORY 
-#+  !!!!  CREARE "MILESTONE 1"
-#+  !!!! IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
-#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+  !!!!  CREARE  "MILESTONE 1"
+#+  !!!!  IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+##  !!!!! DA ELIMINARE per versione 2 SVILUPPATORI
     cd C:\Users\NADIYA\Desktop\BBB
     rd /s /q C:\Users\NADIYA\Desktop\BBB	 
+##+++++++++++++++++++++++++++++++++++++++++
+
     cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2
     rd /s /q C:\Users\NADIYA\Desktop\ASSIGNMENT_2
 
@@ -31,12 +37,15 @@ mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -Darche
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_README.md   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\README.md    
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_.gitignore.txt     C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.gitignore
     cd  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
-
 ###### ???? SERVE ????
     md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\badges
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_branches.svg  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\badges\branches.svg
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_jacoco.svg       C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\badges\jacoco.svg
 ######
+
+## ??? FARE BUILD
+    mvn install
+
 
 git init
 git remote add origin https://github.com/Dmitry358/Assignment_2.git   
@@ -53,14 +62,21 @@ git remote add origin https://github.com/Dmitry358/Assignment_2.git
     gh issue create  --title "Conclusione versione da 1 a 3 numeri"  --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
 
 
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++
+#  !!!!  AGGIUNGERE "issue_1,2,3" NEL PROJECT BOARD  
+#  ---- (FACOLTATIVO)  SPOSTARE "issue_1,2,3" NEL "In progress"  
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
 git add .
 git commit -m "Commit iniziale"
 git push origin master
 
-#+++++++++++++++++++++++++++++++++++++++++++++
-#  !!!!  AGGIUNGERE "issue_1,2,3" NEL PROJECT BOARD  
-#  !!!!  SPOSTARE "issue_1,2,3" NEL "In progress"  
-#+++++++++++++++++++++++++++++++++++++++++++++
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+  !!!!  IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 git checkout -b develop
 git checkout -b feature/versione_numeri_da_1_a_3
@@ -68,35 +84,36 @@ git checkout -b  feature/IntegerToRomain_3_num
 
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_3Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
 
-## ??? FARE BUILD
-#++++++++++++++++++++++++++++++++++++++++++++++++++++
-#  !!!! IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
-#++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 git add .
 git commit -m "Realizzati test per classe IntegerToRomain versione da 1 a 3 numeri"
 
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_3.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
 
+## ??? FARE BUILD
+    mvn install
+
 git add .
 git commit -m "Realizzata classe IntegerToRomain versione da 1 a 3 numeri close #1"
-
 git checkout feature/versione_numeri_da_1_a_3
 git merge feature/IntegerToRomain_3_num
 git push origin --all
  
-#+++++++++++++++++++++++++++++++++++++++
-#  !!!!!!!!!!  CHIUDERE A MANO ISSUE_1   !!!!!!!!!!!
-#+++++++++++++++++++++++++++++++++++++++
 
-#############################################
-#######     STEP-1B (S2):  RomanPrinter_3     #######
-############################################# 
+###########################################################
+#######     STEP-1B (S2):   RomanPrinter_3 + VERSIONE_1-3    #######
+########################################################### 
 
 
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+  !!!!  CONTROLLARE SE PRESENTE CARTELLA  "ASSIGNMENT_2"   !!!!! 
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+##  !!!!! DA CMBIARE PATH per versione 2 SVILUPPATORI
     cd C:\Users\NADIYA\Desktop\BBB
     mkdir C:\Users\NADIYA\Desktop\BBB\roman-number
     cd C:\Users\NADIYA\Desktop\BBB\roman-number
+##++++++++++++++++++++++++++++++++++++++++++++
 	 
 git init
 git remote add origin https://github.com/Dmitry358/Assignment_2.git
@@ -107,25 +124,26 @@ git checkout -b feature/versione_numeri_da_1_a_3
 git pull origin feature/versione_numeri_da_1_a_3
 git checkout -b  feature/RomanPrinter_3_num 
 
+##  !!!!! DA CMBIARE PATH per versione 2 SVILUPPATORI
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\RP_3Test.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java
-
-## ??? FARE BUILD
 
 git add .
 git commit -m "Realizzati test per classe RomanPrinter versione d 1 a 3 numeri"
 
+##  !!!!! DA CMBIARE PATH per versione 2 SVILUPPATORI
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\RP_3.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java
 
-git add .
+## ??? FARE BUILD
+    mvn install
 
-# !!!!! DA VEDERE SE SERVE "close#2" e SE SI PUO FARE PIU CLOSE IN UN COMMIT
-git commit -m "Realizzata classe RomanPrinter per numeri da 1 a 3 close #2 close #3"
+git add .
+git commit -m "Realizzata classe RomanPrinter e VERSIONE_1-3 per numeri da 1 a 3 close #2 close #3"
 git checkout feature/versione_numeri_da_1_a_3
 git merge feature/RomanPrinter_3_num
 git checkout develop
 git merge feature/versione_numeri_da_1_a_3
 
-##!!!!!! COME CHIUDERE ISSUE3 COMUNE
+##!!!!!! COME CHIUDERE ISSUE3 COMUNE (CON UN COMMIT A POSTA)
 #!!!!!!!!!!!!!git release???
 
 git checkout master
@@ -141,18 +159,19 @@ git push origin --all
     gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 6 numeri"  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
 
 ### ISSUE_5
-##  !!!!! DA CMBIARE PER "giuliadoria"
+##  !!!!!!!!!! DA CMBIARE PER "giuliadoria"
     gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 6 numeri"       --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
 
 ### ISSUE_6
-##  !!!!! DA CMBIARE PER "giuliadoria"
+##  !!!!!!!!!! DA CMBIARE PER "giuliadoria"
     gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 6 numeri"       --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
 
 
 #++++++++++++++++++++++++++++++++++++++++++++++
 #+  !!!!  AGGIUNGERE "issue_4,5,6" NEL PROJECT BOARD  
-#+  !!!!  SPOSTARE "issue_4,5,6" NEL "In progress"  
+#+  ---  (FACOLTATIVO) "issue_4,5,6" NEL "In progress"  
 #++++++++++++++++++++++++++++++++++++++++++++++
+
 
     cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
 
@@ -160,8 +179,20 @@ git pull origin master
 git checkout develop
 git pull origin develop
 
+## ??? FARE BUILD
+    mvn install
 
+
+
+#+++++++++++++++++++++++++++++++++++++++++++++++++
+#+  !!!!  CONTROLLARE SE TUTTE Issue e Milestone CHIUSI
+#+++++++++++++++++++++++++++++++++++++++++++++++++
 #######   FINE SCRIPT   ######
+
+
+
+
+
 
 
 
