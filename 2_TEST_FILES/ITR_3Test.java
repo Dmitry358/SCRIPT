@@ -15,6 +15,20 @@ public class IntegerToRomanTest{
     //TESTING: numUni, numDec, numCent, convert: <1; >1000;
     // esempi ammissibili per partizoni
 
+
+    @Test //?????? DA SOSTITUIRE "assertTrue"
+    //!!!!!!!!!!!!!!! DA REALIZZARE !!!!!!!!!!!!!!!!!!!!!!!
+    public void testConvert_ConInputLettera(){
+        String expected = null;
+        char lettera = 'a';
+        boolean correct = true;
+
+        String result = convert(lettera);
+        if(expected != result) { correct = false;}
+
+        assertTrue(correct);
+    }
+
     @Test //?????? DA SOSTITUIRE "assertTrue"
     public void testConvert_ConInputMenoCinquanta(){
         String expected = null;

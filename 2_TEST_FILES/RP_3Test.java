@@ -5,6 +5,7 @@
 
 package it.unipd.mtss;
 
+import static it.unipd.mtss.IntegerToRoman.convert;
 import static it.unipd.mtss.RomanPrinter.print;
 import static it.unipd.mtss.RomanPrinter.printAsciiArt;
 import static it.unipd.mtss.RomanPrinter.print_I;
@@ -26,6 +27,7 @@ public class RomanPrinterTest {
 
 
 //------------- testPrintAsciiArt BEGIN ----------------
+
     @Test
     public void testPrintAsciiArt_ConStringaNulla(){
         String romanNumber = null;
@@ -169,6 +171,19 @@ public class RomanPrinterTest {
     }
 
 //----------------------- testPrint BEGIN ------------------------
+
+    @Test //?????? DA SOSTITUIRE "assertTrue"
+    //!!!!!!!!!!!!!!! DA REALIZZARE !!!!!!!!!!!!!!!!!!!!!!!
+    public void testPrint_ConInputLettera(){
+        String expected = null;
+        char lettera = 'a';
+        boolean correct = true;
+
+        String result = convert(lettera);
+        if(expected != result) { correct = false;}
+
+        assertTrue(correct);
+    }
 
     @Test
     public void testPrint_ConInputMenoCinquanta(){

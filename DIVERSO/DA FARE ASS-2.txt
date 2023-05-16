@@ -1,4 +1,6 @@
-!!!!!!!!!!!! DA SISTEMARE .GITIGNORE ( IDEA ecc.)
+!!!!!!!!!!!! DA REALIZZARE "testPrint_ConInputLettera()" nel "RomanPrinterTest" e 
+"testConvert_ConInputLettera()" nel "IntegerToRomainTest" e CON LETTERA E SPAZIO!!!!!!
+!!!!!!!! DA SISTEMARE .GITIGNORE ( IDEA ecc.)
 !!!! ATTIVARE COVERALLS IN LOCALE
 !!!! AGGIUNGERE COVERALLS IN REMOTO
 !!!! CACHING MAVEN ACTIONS
