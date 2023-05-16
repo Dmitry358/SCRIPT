@@ -38,9 +38,12 @@ mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -Darche
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_jacoco.svg       C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\badges\jacoco.svg
 ######
 
-
+### ISSUE_1
 ##    gh issue create  --title "Realiazzare classe IntegerToRomain e test corrispondenti versione da 1 a 3 numeri"        --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+### ISSUE_2
 ##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 3 numeri"             --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+### ISSUE_3 (???? SERVE ????)
+##    gh issue create  --title "Conclusione versione da 1 a 3 numeri"             --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
 
 
 git init
@@ -72,12 +75,15 @@ git commit -m "Realizzati test per classe IntegerToRomain versione da 1 a 3 nume
 
 git add .
 # !!!!! DA VEDERE SE SERVE "close#1"
-git commit -m "Realizzata classe IntegerToRomain versione da 1 a 3 numeri close#1"
+git commit -m "Realizzata classe IntegerToRomain versione da 1 a 3 numeri close #1"
 
 git checkout feature/versione_numeri_da_1_a_3
 git merge feature/IntegerToRomain_3_num
 git push origin --all
-
+ 
+++++++++++++++++++++++++++++++++++++++++
++ !!!!!!!!!!  CHIUDERE A MANO ISSUE_1   !!!!!!!!!!!
+++++++++++++++++++++++++++++++++++++++++
 
 #############################################
 #######     STEP-1B (S2):  RomanPrinter_3     #######
@@ -109,7 +115,7 @@ git commit -m "Realizzati test per classe RomanPrinter versione d 1 a 3 numeri"
 git add .
 
 # !!!!! DA VEDERE SE SERVE "close#2" e SE SI PUO FARE PIU CLOSE IN UN COMMIT
-git commit -m "Realizzata classe RomanPrinter per numeri da 1 a 3 close #2 close#3"
+git commit -m "Realizzata classe RomanPrinter per numeri da 1 a 3 close #2 close #3"
 git checkout feature/versione_numeri_da_1_a_3
 git merge feature/RomanPrinter_3_num
 git checkout develop
@@ -143,6 +149,8 @@ git pull origin develop
 
 
 ###
+
+
 
 
 ######################################################################################################
