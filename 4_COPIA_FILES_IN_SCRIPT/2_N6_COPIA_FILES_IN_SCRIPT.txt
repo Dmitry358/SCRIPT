@@ -30,7 +30,7 @@ copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\che
 
 cd C:\Users\NADIYA\Desktop\SCRIPT
 git add . 
-git commit -m "VERSIONE_1-6:  CONTROLLATO CON PUSH PRIMA DI INIZIARE VERSIONE_1-6"
+git commit -m "VERSIONE_1-6:  !!!!!!! FINITA !!!!!!!!!!!!"
 
 git push 
 

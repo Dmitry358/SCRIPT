@@ -1,5 +1,5 @@
 ########################################################################################################
-#######     STEP-1A (S1):  CREAZIONE: REPOSITORY, PROGETTO IN LOCALE, VERSIONE_1-3, IntegerToRomain_3     #######
+#######     STEP-1.1 (S1):  CREAZIONE: REPOSITORY, PROGETTO IN LOCALE, VERSIONE_1-3, IntegerToRomain_3     #######
 ########################################################################################################
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -61,7 +61,7 @@ git remote add origin https://github.com/Dmitry358/Assignment_2.git
 
 ### ISSUE_3 (???? SERVE ????)
 ##  !!!!! DA CMBIARE PER "giuliadoria"
-    gh issue create  --title "Conclusione versione da 1 a 3 numeri"  --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
+    gh issue create  --title "Rilascio versione convertitore da 1 a 3 numeri"  --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++
 #  !!!!  AGGIUNGERE "issue_1,2,3" NEL PROJECT BOARD  
@@ -96,7 +96,7 @@ git push origin --all
  
 
 #################################################################
-#######     STEP-1B (S2):   RomanPrinter_3 + PUSH VERSIONE_1-3    #######
+#######     STEP-1.2 (S2):   RomanPrinter_3 + PUSH VERSIONE_1-3    #######
 ################################################################# 
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -147,7 +147,7 @@ git push origin --all
 
 
 #########################################################################
-#######     STEP-2A (S1):  CREAZIONE VERSIONE_1-6  +  IntegerToRomain_6     #######
+#######     STEP-2.1 (S1):  CREAZIONE VERSIONE_1-6  +  IntegerToRomain_6     #######
 #########################################################################
 
 ### ISSUE_4
@@ -159,12 +159,12 @@ git push origin --all
 
 ### ISSUE_6
 ##  !!!!!!!!!! DA CMBIARE PER "giuliadoria"
-    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 6 numeri"       --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
+    gh issue create  --title "Rilascio versione convertitore da 1 a 6 numeri"       --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
 
-#++++++++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++++++++++++++++
 #+  !!!!  AGGIUNGERE "issue_4,5,6" NEL PROJECT BOARD  
 #+  ---  (FACOLTATIVO) "issue_4,5,6" NEL "In progress"  
-#++++++++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++++++++++++++++
 
     cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
 git checkout master
@@ -201,7 +201,7 @@ git push origin feature/versione_numeri_da_1_a_6
 
 
 ###########################################################
-#######     STEP-2B (S2):   RomanPrinter_6 + VERSIONE_1-6    #######
+#######     STEP-2.2 (S2):   RomanPrinter_6 + VERSIONE_1-6    #######
 ########################################################### 
 
 
@@ -249,6 +249,107 @@ git merge develop
 git push origin --all
 
 
+############################################################################
+#######     STEP-3.1 (S1):  CREAZIONE VERSIONE_1-10  +  IntegerToRomain_10     #######
+############################################################################
+
+    ### ISSUE_7
+    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 10 numeri"  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+
+    ### ISSUE_8
+##  !!!!!!!!!! DA CMBIARE PER "giuliadoria"
+    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 10 numeri"  --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
+
+    ### ISSUE_9
+##  !!!!!!!!!! DA CMBIARE PER "giuliadoria"
+    gh issue create  --title "Rilascio versione convertitore da 1 a 10 numeri"   --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
+
+
+#++++++++++++++++++++++++++++++++++++++++++++++
+#+  !!!!  AGGIUNGERE "issue_7,8,9" NEL PROJECT BOARD  
+#+  ---  (FACOLTATIVO) "issue_7,8,9" NEL "In progress"  
+#++++++++++++++++++++++++++++++++++++++++++++++
+
+    cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
+git checkout master
+git pull origin master
+git checkout feature/versione_numeri_da_1_a_6
+git pull origin feature/versione_numeri_da_1_a_6
+git checkout develop
+git pull origin develop
+
+    mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+
+git checkout -b feature/versione_numeri_da_1_a_10
+git checkout -b  feature/IntegerToRomain_10_num
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_10Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
+git add .
+git commit -m "Realizzati test per classe IntegerToRomain versione da 1 a 10 numeri"
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_10.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
+
+    mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+
+git add .
+git commit -m "Realizzata classe IntegerToRomain versione da 1 a 10 numeri close #7"
+git checkout feature/versione_numeri_da_1_a_10
+git merge feature/IntegerToRomain_10_num
+git push origin feature/IntegerToRomain_10_num
+git push origin feature/versione_numeri_da_1_a_10
+
+
+##############################################################
+#######     STEP-2.2 (S2):   RomanPrinter_10 + VERSIONE_1-10    #######
+############################################################## 
+
+
+###  !!!!! CAMBIARE PATH PER 2 SVILUPPATORI
+    cd C:\Users\NADIYA\Desktop\BBB\roman-number
+
+git checkout -b feature/versione_numeri_da_1_a_10
+git pull origin feature/versione_numeri_da_1_a_10
+git checkout -b  feature/RomanPrinter_10_num 
+
+###  !!!!! CAMBIARE PATH PER 2 SVILUPPATORI
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\RP_10Test.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java
+
+git add .
+git commit -m "Realizzati test per classe RomanPrinter versione d 1 a 10 numeri"
+
+##  !!!!! DA CMBIARE PATH per versione 2 SVILUPPATORI
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\RP_10.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java
+
+    mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+
+git add .
+git commit -m "Realizzata classe RomanPrinter e VERSIONE_1-10 per numeri da 1 a 10 close #8 close #9"
+git checkout feature/versione_numeri_da_1_a_10
+git merge feature/RomanPrinter_10_num
+git checkout develop
+git merge feature/versione_numeri_da_1_a_10
+git checkout master
+git merge develop
+git push origin --all
+
+
+
+
+
+
+
+
+
 
 
 
@@ -288,22 +389,3 @@ git push origin --all
 
 
 ######################################################################################################
-
-
-
-
-
-#------------COMMENTI----------------------------------------------------------------------------------------------------------------------------------------
-
-#    rm -rf C:/Users/NADIYA/Desktop/Assignment_2/*
-#    rm -Rf .git
-# copy  /Y  C:\Users\NADIYA\Desktop\App1.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_1\---.java
-
-#/////// cd target\classes\it\unipd\mtss
-
-#//////// java -classpath C:\Users\NADIYA\Desktop\prb\proba-app\target\classes it.unipd.mtss.App
-#java -classpath C:\Users\NADIYA\Desktop\CODICE_ASS2\target\classes org.example.App
-# java -classpath C:\Users\NADIYA\Desktop\PROBA_ASS_2\roman-number\target\classes it.unipd.mtss.App
-
-#//////// cd C:\Users\NADIYA\Desktop\prb\proba-app
-
