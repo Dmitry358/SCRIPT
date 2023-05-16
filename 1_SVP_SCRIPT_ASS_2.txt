@@ -43,8 +43,10 @@ mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -Darche
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_jacoco.svg       C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\badges\jacoco.svg
 ######
 
-## ??? FARE BUILD
     mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
 
 
 git init
@@ -61,36 +63,30 @@ git remote add origin https://github.com/Dmitry358/Assignment_2.git
 ##  !!!!! DA CMBIARE PER "giuliadoria"
     gh issue create  --title "Conclusione versione da 1 a 3 numeri"  --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
 
-
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++
 #  !!!!  AGGIUNGERE "issue_1,2,3" NEL PROJECT BOARD  
 #  ---- (FACOLTATIVO)  SPOSTARE "issue_1,2,3" NEL "In progress"  
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
 git add .
 git commit -m "Commit iniziale"
 git push origin master
-
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #+  !!!!  IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
 git checkout -b develop
 git checkout -b feature/versione_numeri_da_1_a_3
 git checkout -b  feature/IntegerToRomain_3_num
-
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_3Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
-
 git add .
 git commit -m "Realizzati test per classe IntegerToRomain versione da 1 a 3 numeri"
-
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_3.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
-
-## ??? FARE BUILD
     mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
 
 git add .
 git commit -m "Realizzata classe IntegerToRomain versione da 1 a 3 numeri close #1"
@@ -103,11 +99,9 @@ git push origin --all
 #######     STEP-1B (S2):   RomanPrinter_3 + VERSIONE_1-3    #######
 ########################################################### 
 
-
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #+  !!!!  CONTROLLARE SE PRESENTE CARTELLA  "ASSIGNMENT_2"   !!!!! 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
 ##  !!!!! DA CMBIARE PATH per versione 2 SVILUPPATORI
     cd C:\Users\NADIYA\Desktop\BBB
@@ -133,8 +127,10 @@ git commit -m "Realizzati test per classe RomanPrinter versione d 1 a 3 numeri"
 ##  !!!!! DA CMBIARE PATH per versione 2 SVILUPPATORI
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\RP_3.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java
 
-## ??? FARE BUILD
     mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
 
 git add .
 git commit -m "Realizzata classe RomanPrinter e VERSIONE_1-3 per numeri da 1 a 3 close #2 close #3"
@@ -143,8 +139,7 @@ git merge feature/RomanPrinter_3_num
 git checkout develop
 git merge feature/versione_numeri_da_1_a_3
 
-##!!!!!! COME CHIUDERE ISSUE3 COMUNE (CON UN COMMIT A POSTA)
-#!!!!!!!!!!!!!git release???
+##!!!!!! COME CHIUDERE ISSUE_3 COMUNE (CON UN COMMIT A POSTA)
 
 git checkout master
 git merge develop
@@ -172,15 +167,91 @@ git push origin --all
 #+  ---  (FACOLTATIVO) "issue_4,5,6" NEL "In progress"  
 #++++++++++++++++++++++++++++++++++++++++++++++
 
-
     cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
 
 git pull origin master
 git checkout develop
 git pull origin develop
 
-## ??? FARE BUILD
     mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+git checkout -b feature/versione_numeri_da_1_a_6
+git checkout -b  feature/IntegerToRomain_6_num
+
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_6Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
+
+git add .
+git commit -m "Realizzati test per classe IntegerToRomain versione da 1 a 6 numeri"
+
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_6.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
+
+    mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+
+git add .
+git commit -m "Realizzata classe IntegerToRomain versione da 1 a 6 numeri close #4"
+git checkout feature/versione_numeri_da_1_a_6
+git merge feature/IntegerToRomain_6_num
+git push origin --all
+
+
+###########################################################
+#######     STEP-2B (S2):   RomanPrinter_6 + VERSIONE_1-6    #######
+########################################################### 
+
+
+##  !!!!! DA CAMBIARE PATH per versione 2 SVILUPPATORI
+    cd C:\Users\NADIYA\Desktop\BBB
+    mkdir C:\Users\NADIYA\Desktop\BBB\roman-number
+    cd C:\Users\NADIYA\Desktop\BBB\roman-number
+##++++++++++++++++++++++++++++++++++++++++++++
+	 
+
+git checkout develop 
+## ??? SERVE
+git pull origin develop
+git checkout feature/versione_numeri_da_1_a_6
+git pull origin feature/versione_numeri_da_1_a_6
+git checkout -b  feature/RomanPrinter_6_num 
+
+##  !!!!! DA CMBIARE PATH per versione 2 SVILUPPATORI
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\RP_6Test.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java
+
+git add .
+git commit -m "Realizzati test per classe RomanPrinter versione d 1 a 6 numeri"
+
+##  !!!!! DA CMBIARE PATH per versione 2 SVILUPPATORI
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\RP_6.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java
+
+### ??? FARE BUILD
+    mvn install
+
+git add .
+git commit -m "Realizzata classe RomanPrinter e VERSIONE_1-6 per numeri da 1 a 6 close #5 close #6"
+git checkout feature/versione_numeri_da_1_a_6
+git merge feature/RomanPrinter_6_num
+git checkout develop
+git merge feature/versione_numeri_da_1_a_6
+
+##!!!!!! COME CHIUDERE ISSUE_6 COMUNE (CON UN COMMIT A POSTA)
+
+git checkout master
+git merge develop
+git push origin --all
+
+
+
+
+
+
+
+
 
 
 
