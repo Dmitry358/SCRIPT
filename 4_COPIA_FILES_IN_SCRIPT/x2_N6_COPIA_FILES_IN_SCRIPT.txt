@@ -29,7 +29,7 @@ copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\che
 
 cd C:\Users\NADIYA\Desktop\SCRIPT
 git add . 
-git commit -m "VERSIONE-6:  xxx "
+git commit -m "VERSIONE-6:  sistemato errore di compilazione"
 
 git push 
 
