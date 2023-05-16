@@ -1,11 +1,11 @@
-###########################################################################################
-#######     STEP-1A (S1):  CREAZIONE: REPOSITORY, PROGETTO IN LOCALE, IntegerToRomain_3     #######
-###########################################################################################
+########################################################################################################
+#######     STEP-1A (S1):  CREAZIONE: REPOSITORY, PROGETTO IN LOCALE, VERSIONE_1-3, IntegerToRomain_3     #######
+########################################################################################################
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #+  !!!!  PASSARE A GIULIA CARTELLA  "SCRIPT"
 #+  !!!!  GIULIA CREA CARTELLA  "ASSIGNMENT_2"
-#+  !!!!  CONTROLLARE SE PRESENTE CARTELLA DA ME "ASSIGNMENT_2"  
+#+  !!!!  CONTROLLARE SE PRESENTE CARTELLA DA ME  "ASSIGNMENT_2"  
 #+  !!!!  CONTROLLARE CHE NON ESISTA REPOSITORY  "Assignment_2"   
 #+  !!!!  CONTROLLARE SE SONO ELIMINATI TUTTI PROJECT BOARD
 #+  !!!!  CREARE REPOSITORY   "Assignment_2"  
@@ -95,9 +95,9 @@ git merge feature/IntegerToRomain_3_num
 git push origin --all
  
 
-###########################################################
-#######     STEP-1B (S2):   RomanPrinter_3 + VERSIONE_1-3    #######
-########################################################### 
+#################################################################
+#######     STEP-1B (S2):   RomanPrinter_3 + PUSH VERSIONE_1-3    #######
+################################################################# 
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #+  !!!!  CONTROLLARE SE PRESENTE CARTELLA  "ASSIGNMENT_2"   !!!!! 
@@ -146,9 +146,9 @@ git merge develop
 git push origin --all
 
 
-###############################################
-#######     STEP-2A (S1):  IntegerToRomain_6     #######
-###############################################
+#########################################################################
+#######     STEP-2A (S1):  CREAZIONE VERSIONE_1-6  +  IntegerToRomain_6     #######
+#########################################################################
 
 ### ISSUE_4
     gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 6 numeri"  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
@@ -161,17 +161,18 @@ git push origin --all
 ##  !!!!!!!!!! DA CMBIARE PER "giuliadoria"
     gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 6 numeri"       --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
 
-
 #++++++++++++++++++++++++++++++++++++++++++++++
 #+  !!!!  AGGIUNGERE "issue_4,5,6" NEL PROJECT BOARD  
 #+  ---  (FACOLTATIVO) "issue_4,5,6" NEL "In progress"  
 #++++++++++++++++++++++++++++++++++++++++++++++
 
     cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
-
+git checkout master
 git pull origin master
 git checkout develop
 git pull origin develop
+
+### !!! CONFLITTO CON git pull feature/versione_numeri_da_1_a_3 (SEMBRA NON SERVE SISTEMARE)
 
     mvn install
 #++++++++++++
@@ -180,12 +181,9 @@ git pull origin develop
 
 git checkout -b feature/versione_numeri_da_1_a_6
 git checkout -b  feature/IntegerToRomain_6_num
-
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_6Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
-
 git add .
 git commit -m "Realizzati test per classe IntegerToRomain versione da 1 a 6 numeri"
-
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_6.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
 
     mvn install
@@ -198,8 +196,10 @@ git add .
 git commit -m "Realizzata classe IntegerToRomain versione da 1 a 6 numeri close #4"
 git checkout feature/versione_numeri_da_1_a_6
 git merge feature/IntegerToRomain_6_num
-git push origin --all
+git push origin feature/IntegerToRomain_6_num
+git push origin feature/versione_numeri_da_1_a_6
 
+##### !!!!!!  ARRIVATO QUI
 
 ###########################################################
 #######     STEP-2B (S2):   RomanPrinter_6 + VERSIONE_1-6    #######
@@ -210,7 +210,7 @@ git push origin --all
     cd C:\Users\NADIYA\Desktop\BBB
     mkdir C:\Users\NADIYA\Desktop\BBB\roman-number
     cd C:\Users\NADIYA\Desktop\BBB\roman-number
-##++++++++++++++++++++++++++++++++++++++++++++
+## ++++++++++++++++++++++++++++++++++++++++++++
 	 
 
 git checkout develop 
