@@ -4,7 +4,7 @@
 ////////////////////////////////////////////////////////////////////
 
 package it.unipd.mtss;
-aaa
+
 import java.lang.String;
 
 public class IntegerToRoman{

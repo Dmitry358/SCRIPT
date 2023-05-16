@@ -2,16 +2,16 @@
 #######     STEP-1A (S1):  CREAZIONE: REPOSITORY, PROGETTO IN LOCALE, IntegerToRomain_3     #######
 ###########################################################################################
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ !!!!  CONTROLLARE CHE NON ESISTA REPOSITORY  "Assignment_2"   
-+ !!!!  CONTROLLARE SE SONO ELIMINATI TUTTI PROJECT BOARD
-+ !!!!  CREARE REPOSITORY   "Assignment_2"  
-+ !!!!  CREARE PROJECT BOARD   "Number converter" 
-+ !!!!  CAMBIARE STATO "visibility" DEL PROJECT BOARD PER "pubblico"  
-+ !!!!  AGGIUNGERE COLLABORATORE S2 AL REPOSITORY 
-+ !!!!  CREARE "MILESTONE 1"
-+ !!!! IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+  !!!!  CONTROLLARE CHE NON ESISTA REPOSITORY  "Assignment_2"   
+#+  !!!!  CONTROLLARE SE SONO ELIMINATI TUTTI PROJECT BOARD
+#+  !!!!  CREARE REPOSITORY   "Assignment_2"  
+#+  !!!!  CREARE PROJECT BOARD   "Number converter" 
+#+  !!!!  CAMBIARE STATO "visibility" DEL PROJECT BOARD PER "pubblico"  
+#+  !!!!  AGGIUNGERE COLLABORATORE S2 AL REPOSITORY 
+#+  !!!!  CREARE "MILESTONE 1"
+#+  !!!! IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     cd C:\Users\NADIYA\Desktop\BBB
     rd /s /q C:\Users\NADIYA\Desktop\BBB	 
@@ -52,10 +52,10 @@ git add .
 git commit -m "Commit iniziale"
 git push origin master
 
-++++++++++++++++++++++++++++++++++++++++++++++
-+ !!!!  AGGIUNGERE "issue_1,2" NEL PROJECT BOARD  
-+ !!!!  SPOSTARE "issue_1,2" NEL "In progress"  
-++++++++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++++++++++++++
+#  !!!!  AGGIUNGERE "issue_1,2" NEL PROJECT BOARD  
+#  !!!!  SPOSTARE "issue_1,2" NEL "In progress"  
+#+++++++++++++++++++++++++++++++++++++++++++++
 
 git checkout -b develop
 git checkout -b feature/versione_numeri_da_1_a_3
@@ -64,9 +64,9 @@ git checkout -b  feature/IntegerToRomain_3_num
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_3Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
 
 ## ??? FARE BUILD
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-+ !!!! IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++++++++++++++++++++++
+#  !!!! IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
+#++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 git add .
 git commit -m "Realizzati test per classe IntegerToRomain versione da 1 a 3 numeri"
@@ -81,9 +81,9 @@ git checkout feature/versione_numeri_da_1_a_3
 git merge feature/IntegerToRomain_3_num
 git push origin --all
  
-++++++++++++++++++++++++++++++++++++++++
-+ !!!!!!!!!!  CHIUDERE A MANO ISSUE_1   !!!!!!!!!!!
-++++++++++++++++++++++++++++++++++++++++
+#+++++++++++++++++++++++++++++++++++++++
+#  !!!!!!!!!!  CHIUDERE A MANO ISSUE_1   !!!!!!!!!!!
+#+++++++++++++++++++++++++++++++++++++++
 
 #############################################
 #######     STEP-1B (S2):  RomanPrinter_3     #######
@@ -136,10 +136,10 @@ git push origin --all
 ##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 6 numeri"  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
 ##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 6 numeri"       --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
 
-++++++++++++++++++++++++++++++++++++++++++++++
-+ !!!!  AGGIUNGERE "issue_3,4" NEL PROJECT BOARD  
-+ !!!!  SPOSTARE "issue_3,4" NEL "In progress"  
-++++++++++++++++++++++++++++++++++++++++++++++
+#++++++++++++++++++++++++++++++++++++++++++++++
+#  !!!!  AGGIUNGERE "issue_3,4" NEL PROJECT BOARD  
+#  !!!!  SPOSTARE "issue_3,4" NEL "In progress"  
+#++++++++++++++++++++++++++++++++++++++++++++++
 
     cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
 
