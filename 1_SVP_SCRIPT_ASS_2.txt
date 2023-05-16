@@ -1,6 +1,6 @@
-#########################################################################################
-#######     STEP-1 (S1):  CREAZIONE: REPOSITORY, PROGETTO IN LOCALE, IntegerToRomain_3     #######
-#########################################################################################
+###########################################################################################
+#######     STEP-1A (S1):  CREAZIONE: REPOSITORY, PROGETTO IN LOCALE, IntegerToRomain_3     #######
+###########################################################################################
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + !!!!  CONTROLLARE CHE NON ESISTA REPOSITORY  "Assignment_2"   
@@ -10,7 +10,6 @@
 + !!!!  CAMBIARE STATO "visibility" DEL PROJECT BOARD PER "pubblico"  
 + !!!!  AGGIUNGERE COLLABORATORE S2 AL REPOSITORY 
 + !!!!  CREARE "MILESTONE 1"
-+ ????  CREARE ACTION ???
 + !!!! IMPOSTARE NEL REPO IL RAMO "master" COME DEFAULT
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -40,20 +39,33 @@ mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -Darche
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_.gitignore.txt     C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.gitignore
     cd  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
 
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 3 numeri"        --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 3 numeri"             --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+
+
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 10 numeri"      --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 10 numeri"           --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 20 numeri"      --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 20 numeri"           --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 50 numeri"      --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 50 numeri"           --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 100 numeri"    --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 100 numeri"         --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 500 numeri"    --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 500 numeri"         --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 1000 numeri"  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 1000 numeri"       --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+
 git init
 git remote add origin https://github.com/Dmitry358/Assignment_2.git   
 git add .
 git commit -m "Commit iniziale"
 git push origin master
 
-##    gh issue create  --title " ISSUE_1 "  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
-##    gh issue create  --title " ISSUE_2 "  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
-##    gh issue create  --title " ISSUE_3 "  --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1"
-
-+++++++++++++++++++++++++++++++++++++++++++++++
-+ !!!!  AGGIUNGERE "issue_1,2,3" NEL PROJECT BOARD  
-+ !!!!  SPOSTARE "issue_1,2,3" NEL "In progress"  
-+++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++
++ !!!!  AGGIUNGERE "issue_1,2" NEL PROJECT BOARD  
++ !!!!  SPOSTARE "issue_1,2" NEL "In progress"  
+++++++++++++++++++++++++++++++++++++++++++++++
 
 git checkout -b develop
 git checkout -b  feature/IntegerToRomain_3_num
@@ -66,20 +78,20 @@ git checkout -b  feature/IntegerToRomain_3_num
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 git add .
-git commit -m "Preparati test per classe IntegerToRomain versione 3 numeri"
+git commit -m "Realizzati test per classe IntegerToRomain versione da 1 a 3 numeri"
 
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_3.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
 
 git add .
-git commit -m "Realizzata classe IntegerToRomain versione 3 numeri"
+git commit -m "Realizzata classe IntegerToRomain versione da 1 a 3 numeri close#1"
 git checkout develop
 git merge feature/IntegerToRomain_3_num
 git push origin --all
 
 
-###########################################
-#######     STEP-2 (S2):  RomanPrinter_3     #######
-########################################### 
+#############################################
+#######     STEP-1B (S2):  RomanPrinter_3     #######
+############################################# 
 
 
     cd C:\Users\NADIYA\Desktop\BBB
@@ -93,32 +105,44 @@ git checkout -b develop
 git pull origin develop
 git checkout -b  feature/RomanPrinter_3_num 
 
-    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\RP_3.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\RP_3Test.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java
 
 ## ??? FARE BUILD
 
 git add .
-git commit -m "Realizzata classe IntegerToRoman per numeri da 1 a 3 close #1"
+git commit -m "Realizzati test per classe RomanPrinter versione d 1 a 3 numeri"
+
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\RP_3.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java
+
+git add .
+git commit -m "Realizzata classe RomanPrinter per numeri da 1 a 3 close #2"
 git checkout develop
 git merge feature/RomanPrinter_3_num
 
-#git release???
+#!!!!!!!!!!!!!git release???
 
 git checkout master
 git merge develop
 git push origin --all
 
 
-##############################################
-#######     STEP-3 (S1):  IntegerToRomain_6     #######
-##############################################
+###############################################
+#######     STEP-2A (S1):  IntegerToRomain_6     #######
+###############################################
 
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 6 numeri"  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 6 numeri"       --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+
+++++++++++++++++++++++++++++++++++++++++++++++
++ !!!!  AGGIUNGERE "issue_3,4" NEL PROJECT BOARD  
++ !!!!  SPOSTARE "issue_3,4" NEL "In progress"  
+++++++++++++++++++++++++++++++++++++++++++++++
 
     cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
-git pull origin develop
-git checkout master
+
 git pull origin master
+git checkout develop
+git pull origin develop
 
 
 ###
@@ -129,7 +153,11 @@ git pull origin master
 
 
 
-#-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+#------------COMMENTI----------------------------------------------------------------------------------------------------------------------------------------
 
 #    rm -rf C:/Users/NADIYA/Desktop/Assignment_2/*
 #    rm -Rf .git
