@@ -26,6 +26,11 @@ mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -Darche
     md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows    
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_build.yml         C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\build.yml
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle_workflow.yml         C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\checkstyle_workflow.yml
+    md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations    
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle.xml  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations\checkstyle.xml
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_README.md   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\README.md    
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_.gitignore.txt     C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.gitignore
+    cd  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
 
 ###### ???? SERVE ????
     md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\badges
@@ -33,28 +38,10 @@ mvn archetype:generate -DgroupId=it.unipd.mtss -DartifactId=roman-number -Darche
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_jacoco.svg       C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\badges\jacoco.svg
 ######
 
-    md C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations    
-    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle.xml  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\configurations\checkstyle.xml
-    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_README.md   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\README.md    
-    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_.gitignore.txt     C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.gitignore
-    cd  C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
 
-##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 3 numeri"        --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe IntegerToRomain e test corrispondenti versione da 1 a 3 numeri"        --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
 ##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 3 numeri"             --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
 
-
-##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 10 numeri"      --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
-##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 10 numeri"           --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
-##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 20 numeri"      --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
-##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 20 numeri"           --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
-##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 50 numeri"      --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
-##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 50 numeri"           --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
-##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 100 numeri"    --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
-##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 100 numeri"         --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
-##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 500 numeri"    --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
-##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 500 numeri"         --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
-##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 1000 numeri"  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
-##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 1000 numeri"       --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
 
 git init
 git remote add origin https://github.com/Dmitry358/Assignment_2.git   
@@ -68,9 +55,7 @@ git push origin master
 ++++++++++++++++++++++++++++++++++++++++++++++
 
 git checkout -b develop
-
-###!!!!! feature/ versione numeri da 1 a 3
-
+git checkout -b feature/versione_numeri_da_1_a_3
 git checkout -b  feature/IntegerToRomain_3_num
 
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_3Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
@@ -86,8 +71,10 @@ git commit -m "Realizzati test per classe IntegerToRomain versione da 1 a 3 nume
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_3.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
 
 git add .
+# !!!!! DA VEDERE SE SERVE "close#1"
 git commit -m "Realizzata classe IntegerToRomain versione da 1 a 3 numeri close#1"
-git checkout develop
+
+git checkout feature/versione_numeri_da_1_a_3
 git merge feature/IntegerToRomain_3_num
 git push origin --all
 
@@ -106,6 +93,8 @@ git remote add origin https://github.com/Dmitry358/Assignment_2.git
 git pull origin master
 git checkout -b develop 
 git pull origin develop
+git checkout -b feature/versione_numeri_da_1_a_3
+git pull origin feature/versione_numeri_da_1_a_3
 git checkout -b  feature/RomanPrinter_3_num 
 
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\RP_3Test.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java
@@ -118,10 +107,15 @@ git commit -m "Realizzati test per classe RomanPrinter versione d 1 a 3 numeri"
     copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\RP_3.java   C:\Users\NADIYA\Desktop\BBB\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java
 
 git add .
-git commit -m "Realizzata classe RomanPrinter per numeri da 1 a 3 close #2"
-git checkout develop
-git merge feature/RomanPrinter_3_num
 
+# !!!!! DA VEDERE SE SERVE "close#2" e SE SI PUO FARE PIU CLOSE IN UN COMMIT
+git commit -m "Realizzata classe RomanPrinter per numeri da 1 a 3 close #2 close#3"
+git checkout feature/versione_numeri_da_1_a_3
+git merge feature/RomanPrinter_3_num
+git checkout develop
+git merge feature/versione_numeri_da_1_a_3
+
+##!!!!!! COME CHIUDERE ISSUE3 COMUNE
 #!!!!!!!!!!!!!git release???
 
 git checkout master
@@ -151,10 +145,23 @@ git pull origin develop
 ###
 
 
+######################################################################################################
+
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 10 numeri"      --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 10 numeri"           --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 20 numeri"      --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 20 numeri"           --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 50 numeri"      --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 50 numeri"           --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 100 numeri"    --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 100 numeri"         --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 500 numeri"    --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 500 numeri"         --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 1000 numeri"  --body ""  --label "documentation"  --assignee "@me"         --milestone "MILESTONE 1" 
+##    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 1000 numeri"       --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
 
 
-
-
+######################################################################################################
 
 
 
