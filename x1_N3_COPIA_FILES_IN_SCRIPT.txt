@@ -23,10 +23,10 @@ copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\bui
 8. ### checkstyle_workflow.yml --> SRC_checkstyle_workflow.yml  ###
 copy  /Y C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\.github\workflows\checkstyle_workflow.yml  C:\Users\NADIYA\Desktop\SCRIPT\3_AUX_FILES\SRC_checkstyle_workflow.yml
 
-...
+
 cd C:\Users\NADIYA\Desktop\SCRIPT
 git add . 
-git commit -m " "
+git commit -m " Realizzati test per funzioni printAscii e print_I vers 3 numeri"
 
 git push 
 

@@ -6,13 +6,12 @@
 package it.unipd.mtss;
 
 public class RomanPrinter {
-/*
-    private static String print(int num) {
+
+    public static String print(int num) {
         return printAsciiArt(IntegerToRoman.convert(num));
     }
-*/
 
-    public static String printAsciiArt(String romanNumber) {
+    protected static String printAsciiArt(String romanNumber) {
         String stringaAscii = "";
         boolean correctInput = true;
 
@@ -23,9 +22,12 @@ public class RomanPrinter {
         }
 
         for (int i = 0; correctInput && i < romanNumber.length(); i++){
-            if(romanNumber.charAt(i) == 'I') { stringaAscii += print_I(); }
-            else {
-                correctInput = false;
+            if(romanNumber.charAt(i) != 'I') { correctInput = false; }
+        }
+
+        if(correctInput) {
+            for (int i = 0; i < romanNumber.length(); i++) {
+                    stringaAscii += print_I();
             }
         }
 
@@ -43,7 +45,6 @@ public class RomanPrinter {
         System.out.println(str_I);
         return str_I;
     }
-
 
 
 }

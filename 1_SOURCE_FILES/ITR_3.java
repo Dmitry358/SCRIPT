@@ -10,19 +10,14 @@ import java.lang.String;
 public class IntegerToRoman{
 
     public static String convert(int number){
-       return numUni(number);
+        String result = null;
+        switch (number){
+            case (1): result = "I"; break;
+            case (2): result = "II"; break;
+            case (3): result = "III"; break;
+            default: result = null;
+        }
+        return result;
    }
 
-//!!!!!! REALIZZARE FUNZIONE DI CONTROLLO DI CORRETTEZZA DI INPUT
-
-    public static String numUni(int num_uni){
-        String aux="";
-        switch (num_uni){
-            case (1): aux="I"; break;
-            case (2): aux="II"; break;
-            case (3): aux="III"; break;
-            //default: SERVE?
-        }
-        return aux;
-    }
 }
