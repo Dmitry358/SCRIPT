@@ -3,46 +3,38 @@
 // Dmitry Pluzhnikov 1169886
 ////////////////////////////////////////////////////////////////////
 
+
+////////////////////   V-20   ////////////////////
+
+
 package it.unipd.mtss;
 
-import org.junit.Before;
+import static it.unipd.mtss.IntegerToRoman.convert;
+
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
-import static it.unipd.mtss.IntegerToRoman.convert;
-import static it.unipd.mtss.IntegerToRoman.numUni;
-import static org.junit.Assert.assertTrue;
-
 public class IntegerToRomanTest{
+
     //TESTING: numUni, numDec, numCent, convert: <1; >1000;
     // esempi ammissibili per partizoni
 
-    @Before//!!!!!!!!!!!!! SERVE???
-    public void inizializzazione() {
-        IntegerToRoman a = new IntegerToRoman();
-    }
-
-    @Test
-    public void testConvert_InputMinoreDiUno(){
-        String aux = convert(1);
-        assertTrue("I".equals(aux));
-    }
-
-    @Test
-    public void testConvert_InputMaggioreDiMille(){
-        String aux = convert(2);
-        assertTrue("II".equals(aux));
-    }
-
-    @Test
-    public void test_3(){
-        String aux = convert(3);
-        assertTrue("III".equals(aux));
-    }
-
-//---------------- numUni BEGIN----------------------
 
     @Test //?????? DA SOSTITUIRE "assertTrue"
-    public void testNumUni_ConInputMenoCinquanta(){
+    //!!!!!!!!!!!!!!! DA REALIZZARE !!!!!!!!!!!!!!!!!!!!!!!
+    public void testConvert_ConInputLettera(){
+        String expected = null;
+        char lettera = 'a';
+        boolean correct = true;
+
+        String result = convert(lettera);
+        if(expected != result) { correct = false;}
+
+        assertTrue(correct);
+    }
+
+    @Test //?????? DA SOSTITUIRE "assertTrue"
+    public void testConvert_ConInputMenoCinquanta(){
         String expected = null;
         int number = -50;
         boolean correct = true;
@@ -54,7 +46,7 @@ public class IntegerToRomanTest{
     }
 
     @Test //?????? DA SOSTITUIRE "assertTrue"
-    public void testNumUni_ConInputZero(){
+    public void testConvert_ConInputZero(){
         String expected = null;
         int number = 0;
         boolean correct = true;
@@ -66,7 +58,7 @@ public class IntegerToRomanTest{
     }
 
     @Test
-    public void testNumUni_ConInputUno(){
+    public void testConvert_ConInputUno(){
         String expected = "I";
         int number = 1;
 
@@ -76,7 +68,7 @@ public class IntegerToRomanTest{
     }
 
     @Test
-    public void testNumUni_ConInputDue(){
+    public void testConvert_ConInputDue(){
         String expected = "II";
         int number = 2;
 
@@ -86,7 +78,7 @@ public class IntegerToRomanTest{
     }
 
     @Test
-    public void testNumUni_ConInputTre(){
+    public void testConvert_ConInputTre(){
         String expected = "III";
         int number = 3;
 
@@ -96,9 +88,109 @@ public class IntegerToRomanTest{
     }
 
     @Test //?????? DA SOSTITUIRE "assertTrue"
-    public void testNumUni_InputQuattro(){
-        String expected = null;
+    public void testConvert_ConInputQuattro(){
+        String expected = "IV";
         int number = 4;
+
+        String result = convert(number);
+
+        assertTrue(expected.equals(result));
+    }
+
+    @Test //?????? DA SOSTITUIRE "assertTrue"
+    public void testConvert_ConInputCinque(){
+        String expected = "V";
+        int number = 5;
+
+        String result = convert(number);
+
+        assertTrue(expected.equals(result));
+    }
+
+
+    @Test //?????? DA SOSTITUIRE "assertTrue"
+    public void testConvert_ConInputSei(){
+        String expected = "VI";
+        int number = 6;
+
+        String result = convert(number);
+
+        assertTrue(expected.equals(result));
+    }
+
+    @Test //?????? DA SOSTITUIRE "assertTrue"
+    public void testConvert_ConInputSette(){
+        String expected = "VII";
+        int number = 7;
+
+        String result = convert(number);
+
+        assertTrue(expected.equals(result));
+    }
+
+
+    @Test //?????? DA SOSTITUIRE "assertTrue"
+    public void testConvert_ConInputOtto(){
+        String expected = "VIII";
+        int number = 8;
+
+        String result = convert(number);
+
+        assertTrue(expected.equals(result));
+    }
+
+    @Test //?????? DA SOSTITUIRE "assertTrue"
+    public void testConvert_ConInputNove(){
+        String expected = "IX";
+        int number = 9;
+
+        String result = convert(number);
+
+        assertTrue(expected.equals(result));
+    }
+
+    @Test //?????? DA SOSTITUIRE "assertTrue"
+    public void testConvert_ConInputDieci(){
+        String expected = "X";
+        int number = 10;
+
+        String result = convert(number);
+
+        assertTrue(expected.equals(result));
+    }
+
+    @Test //?????? DA SOSTITUIRE "assertTrue"
+    public void testConvert_ConInputUndici(){
+        String expected = "XI";
+        int number = 11;
+        String result = convert(number);
+
+        assertTrue(expected.equals(result));
+    }
+
+    @Test //?????? DA SOSTITUIRE "assertTrue"
+    public void testConvert_ConInputDicianove(){
+        String expected = "XIX";
+        int number = 19;
+        String result = convert(number);
+
+        assertTrue(expected.equals(result));
+    }
+
+    @Test //?????? DA SOSTITUIRE "assertTrue"
+    public void testConvert_ConInputVenti(){
+        String expected = "XX";
+        int number = 20;
+
+        String result = convert(number);
+
+        assertTrue(expected.equals(result));
+    }
+
+    @Test //?????? DA SOSTITUIRE "assertTrue"
+    public void testConvert_ConInputVentuno(){
+        String expected = null;
+        int number = 21;
         boolean correct = true;
 
         String result = convert(number);
@@ -107,8 +199,9 @@ public class IntegerToRomanTest{
         assertTrue(correct);
     }
 
+
     @Test //?????? DA SOSTITUIRE "assertTrue"
-    public void testNumUni_InputMilleUno(){
+    public void testConvert_ConInputMilleUno(){
         String expected = null;
         int number = 1001;
         boolean correct = true;
@@ -119,26 +212,5 @@ public class IntegerToRomanTest{
         assertTrue(correct);
     }
 
-//---------------- numUni END----------------------
-
-/*
-    @Test
-    public void test_4(){
-        String aux = numUni(1);
-        assertTrue("I".equals(aux));
-    }
-
-    @Test
-    public void test_5(){
-        String aux = numUni(2);
-        assertTrue("II".equals(aux));
-    }
-
-    @Test
-    public void test_6(){
-        String aux = numUni(3);
-        assertTrue("III".equals(aux));
-    }
-*/
 
 }

@@ -483,7 +483,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void testPrint_Con_VI(){
+    public void testPrint_ConSei(){
         int romanNumber = 6;
         String expected ="__      __\n"+
                 "\\ \\    / /\n"+
@@ -504,7 +504,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void testPrint_Con_VII(){
+    public void testPrint_ConSette(){
         int romanNumber = 7;
         String expected = null;
 
