@@ -1039,7 +1039,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void testPrint_ConVentuon(){
+    public void testPrint_ConVentuno(){
         int romanNumber = 21;
         String expected = null;
 
