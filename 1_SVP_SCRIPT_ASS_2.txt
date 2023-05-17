@@ -19,7 +19,7 @@
 ##  !!!!! DA ELIMINARE PER 2 SVILUPPATORI
     cd C:\Users\NADIYA\Desktop\BBB
     rd /s /q C:\Users\NADIYA\Desktop\BBB	 
-##+++++++++++++++++++++++++++++++++++++++++
+##++++++++++++++++++++++++++++++++++++++++++
 
     cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2
     rd /s /q C:\Users\NADIYA\Desktop\ASSIGNMENT_2
