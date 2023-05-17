@@ -15,5 +15,13 @@ jobs:
             java-version: 11
             cache: 'maven'
             
+        - name: Cache maven 
+          uses: actions/cache@v3 
+          with: 
+            path: ~/.m2/repository 
+            key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }} 
+            restore-keys: | 
+              ${{ runner.os }}-maven-             
+            
         - name: BUILD WITH MAVEN
           run: mvn --batch-mode --update-snapshots checkstyle:check
