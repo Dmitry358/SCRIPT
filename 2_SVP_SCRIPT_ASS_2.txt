@@ -374,10 +374,214 @@ git push origin feature/IntegerToRomain_20_num
 git push origin feature/versione_numeri_da_1_a_20
 
 
+###########################################################################
+#######     STEP-4.2 (S2):   RomanPrinter_20 + VERSIONE_1-20  + Close #11, #12  #######
+########################################################################### 
 
 
+cd C:\Users\utente\OneDrive\Desktop\Assignment2\roman-number
+
+git checkout -b feature/versione_numeri_da_1_a_20
+git pull origin feature/versione_numeri_da_1_a_20
+git checkout -b  feature/RomanPrinter_20_num 
+
+Copy-Item "C:\Users\utente\OneDrive\Desktop\SCRIPT\2_TEST_FILES\RP_20Test.java"   -Destination "C:\Users\utente\OneDrive\Desktop\Assignment2\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java"
+
+git add .
+git commit -m "Realizzati test per classe RomanPrinter versione d 1 a 20 numeri"
+
+Copy-Item "C:\Users\utente\OneDrive\Desktop\SCRIPT\1_SOURCE_FILES\RP_20.java"   -Destination "C:\Users\utente\OneDrive\Desktop\Assignment2\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java"
+
+#    mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+git add .
+git commit -m "Realizzata classe RomanPrinter e VERSIONE_1-20 per numeri da 1 a 20 close #11 close #12"
+git checkout feature/versione_numeri_da_1_a_20
+git merge feature/RomanPrinter_20_num
+git checkout develop
+git merge feature/versione_numeri_da_1_a_20
+git checkout master
+git merge develop
+git push origin --all
 
 
+####################################################################################################
+#######     STEP-5.1 (S1):  CREAZIONE VERSIONE_1-50  +  IntegerToRomain_50 + ISSUE_13,14,15 + Close #13    #######
+####################################################################################################
+
+    ### ISSUE_13
+    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 50 numeri"  --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
+
+    ### ISSUE_14
+    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 50 numeri"  --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+
+    ### ISSUE_15
+    gh issue create  --title "Rilascio versione convertitore da 1 a 50 numeri"   --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+
+#++++++++++++++++++++++++++++++++++++++++++++++
+#+  !!!!  AGGIUNGERE "issue_13,14,15" NEL PROJECT BOARD  
+#+  ---  (FACOLTATIVO) "issue_13,14,15" NEL "In progress"  
+#++++++++++++++++++++++++++++++++++++++++++++++
+
+    cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
+git checkout master
+git pull origin master
+git checkout feature/versione_numeri_da_1_a_20
+git pull origin feature/versione_numeri_da_1_a_20
+git checkout develop
+git pull origin develop
+
+    mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+git checkout -b feature/versione_numeri_da_1_a_50
+git checkout -b  feature/IntegerToRomain_50_num
+
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_50Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
+
+git add .
+git commit -m "Realizzati test per classe IntegerToRomain versione da 1 a 50 numeri"
+   
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_50.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
+
+    mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+git add .
+git commit -m "Realizzata classe IntegerToRomain versione da 1 a 50 numeri close #13"
+git checkout feature/versione_numeri_da_1_a_50
+git merge feature/IntegerToRomain_50_num
+git push origin feature/IntegerToRomain_50_num
+git push origin feature/versione_numeri_da_1_a_50
+
+
+###########################################################################
+#######     STEP-5.2 (S2):   RomanPrinter_50 + VERSIONE_1-50  + Close #14, #15  #######
+########################################################################### 
+
+
+cd C:\Users\utente\OneDrive\Desktop\Assignment2\roman-number
+
+git checkout -b feature/versione_numeri_da_1_a_50
+git pull origin feature/versione_numeri_da_1_a_50
+git checkout -b  feature/RomanPrinter_50_num 
+
+Copy-Item "C:\Users\utente\OneDrive\Desktop\SCRIPT\2_TEST_FILES\RP_50Test.java"   -Destination "C:\Users\utente\OneDrive\Desktop\Assignment2\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java"
+
+git add .
+git commit -m "Realizzati test per classe RomanPrinter versione d 1 a 50 numeri"
+
+Copy-Item "C:\Users\utente\OneDrive\Desktop\SCRIPT\1_SOURCE_FILES\RP_50.java"   -Destination "C:\Users\utente\OneDrive\Desktop\Assignment2\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java"
+
+#    mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+git add .
+git commit -m "Realizzata classe RomanPrinter e VERSIONE_1-50 per numeri da 1 a 50 close #14 close #15"
+git checkout feature/versione_numeri_da_1_a_50
+git merge feature/RomanPrinter_50_num
+git checkout develop
+git merge feature/versione_numeri_da_1_a_50
+git checkout master
+git merge develop
+git push origin --all
+
+
+####################################################################################################
+#######     STEP-6.1 (S1):  CREAZIONE VERSIONE_1-100  +  IntegerToRomain_100 + ISSUE_16,17,18 + Close #16    #######
+####################################################################################################
+
+    ### ISSUE_16
+    gh issue create  --title "Realiazzare classe IntegerToRomain versione da 1 a 100 numeri"  --body ""  --label "documentation"  --assignee "@me"  --milestone "MILESTONE 1" 
+
+    ### ISSUE_17
+    gh issue create  --title "Realiazzare classe RomanPrinter versione da 1 a 100 numeri"  --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+
+    ### ISSUE_18
+    gh issue create  --title "Rilascio versione convertitore da 1 a 100 numeri"   --body ""  --label "documentation"  --assignee "giuliadoria"  --milestone "MILESTONE 1" 
+
+#++++++++++++++++++++++++++++++++++++++++++++++
+#+  !!!!  AGGIUNGERE "issue_16,17,18" NEL PROJECT BOARD  
+#+  ---  (FACOLTATIVO) "issue_16,17,18" NEL "In progress"  
+#++++++++++++++++++++++++++++++++++++++++++++++
+
+    cd C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number
+git checkout master
+git pull origin master
+git checkout feature/versione_numeri_da_1_a_50
+git pull origin feature/versione_numeri_da_1_a_50
+git checkout develop
+git pull origin develop
+
+    mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+git checkout -b feature/versione_numeri_da_1_a_100
+git checkout -b  feature/IntegerToRomain_100_num
+
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\2_TEST_FILES\ITR_100Test.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\test\java\it\unipd\mtss\IntegerToRomanTest.java
+
+git add .
+git commit -m "Realizzati test per classe IntegerToRomain versione da 1 a 100 numeri"
+   
+    copy  /Y  C:\Users\NADIYA\Desktop\SCRIPT\1_SOURCE_FILES\ITR_100.java   C:\Users\NADIYA\Desktop\ASSIGNMENT_2\roman-number\src\main\java\it\unipd\mtss\IntegerToRoman.java
+
+    mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+git add .
+git commit -m "Realizzata classe IntegerToRomain versione da 1 a 100 numeri close #16"
+git checkout feature/versione_numeri_da_1_a_100
+git merge feature/IntegerToRomain_100_num
+git push origin feature/IntegerToRomain_100_num
+git push origin feature/versione_numeri_da_1_a_100
+
+
+###########################################################################
+#######     STEP-6.2 (S2):   RomanPrinter_100 + VERSIONE_1-100  + Close #17, #18  #######
+########################################################################### 
+
+
+cd C:\Users\utente\OneDrive\Desktop\Assignment2\roman-number
+
+git checkout -b feature/versione_numeri_da_1_a_100
+git pull origin feature/versione_numeri_da_1_a_100
+git checkout -b  feature/RomanPrinter_100_num 
+
+Copy-Item "C:\Users\utente\OneDrive\Desktop\SCRIPT\2_TEST_FILES\RP_100Test.java"   -Destination "C:\Users\utente\OneDrive\Desktop\Assignment2\roman-number\src\test\java\it\unipd\mtss\RomanPrinterTest.java"
+
+git add .
+git commit -m "Realizzati test per classe RomanPrinter versione d 1 a 100 numeri"
+
+Copy-Item "C:\Users\utente\OneDrive\Desktop\SCRIPT\1_SOURCE_FILES\RP_100.java"   -Destination "C:\Users\utente\OneDrive\Desktop\Assignment2\roman-number\src\main\java\it\unipd\mtss\RomanPrinter.java"
+
+#    mvn install
+#++++++++++++
+#+  !!! STOP    +
+#++++++++++++
+
+git add .
+git commit -m "Realizzata classe RomanPrinter e VERSIONE_1-100 per numeri da 1 a 100 close #17 close #18"
+git checkout feature/versione_numeri_da_1_a_100
+git merge feature/RomanPrinter_100_num
+git checkout develop
+git merge feature/versione_numeri_da_1_a_100
+git checkout master
+git merge develop
+git push origin --all
 
 
 
