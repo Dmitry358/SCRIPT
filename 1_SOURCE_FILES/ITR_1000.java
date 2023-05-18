@@ -3,160 +3,155 @@
 // Dmitry Pluzhnikov 1169886
 ////////////////////////////////////////////////////////////////////
 
+////////////////////   V-1000   ////////////////////
+
 package it.unipd.mtss;
 
-import java.io.IOException; //TEMPORANEO
-import java.util.Scanner;
-import java.io.File; //TEMPORANEO
-import java.io.PrintWriter; //TEMPORANEO
+import java.lang.String;
 
 public class IntegerToRoman{
 
-    public static void main( String[] args ) {
-
-        stampaInFile();
-        Scanner in = new Scanner(System.in);
-        System.out.print("\nINSERISCI NUMERO: ");
-        int num = in.nextInt();
-        in.close();
-
-        numCent(num);
-        System.out.print("\n");
+    protected static String stampaDaUnoATre(int number){
+        String result = "";
+        for(int i = 1; i <= number; i++){
+            result += "I";
+        }
+        return  result;
     }
 
-    public static String convert(int number){
-        // TODO
-        return null;
-    }
+    protected static String stampaDaSeiAOtto(int number){
+        String result = "V";
+        for(int i = 1; i <= number-5; i++){
+            result += "I";
+        }
+        return  result;
+    }
 
-//!!!!!! REALIZZARE FUNZIONE DI CONTROLLO DI CORRETTEZZA DI INPUT
+    protected static String numUni(int number){
+        String result = "";
 
-    public static void numCent(int num) {
-        
-        //System.out.printf("\nNUMERO ROMANO: ");
-        //System.out.printf("Cent:");
-        int num_cent_rest = 0;
-        int num_dec = 0;
+        if(number>=1 && number <=3){
+            result = stampaDaUnoATre(number);
+        }
+
+        else if(number == 4) { result = "IV"; }
+        else if(number == 5) { result = "V"; }
+
+        else if(number>=6 && number <=8){
+            result = stampaDaSeiAOtto(number);
+        }
+
+        else if(number == 9) { result = "IX"; }
+
+        return result.isEmpty() ? null : result;
+    }
+
+    protected static String numDecine(int number){
+
+        String result = "";
+
+        // 99 >= num >= 90
+        if (number / 90 >= 1){
+            result += "XC";
+
+            // 9 >= num >= 1
+            if (number % 10 > 0) { result += numUni(number % 10); }
+        }
+
+        // 89 >= num >= 50
+        else if(number/50 >= 1) {
+            result += "L";
+
+            for (int i = 1; i <= (number - 50) / 10; i++){
+                result += "X";
+            }
+
+            // 9 >= num >= 1
+            if (number % 10 > 0) { result += numUni(number % 10); }
+        }
+
+        // 49 >= num >= 40
+        else if (number / 40 >= 1 ) {
+            result += "XL";
+
+            // 9 >= num >= 1
+            if (number % 10 > 0) { result += numUni(number % 10); }
+        }
+
+        // 39 >= num >= 1
+        else {
+            // 39 >= num >= 10
+            for (int i = 1; i <= number / 10; i++) {
+                result += "X";
+            }
+
+            // 9 >= num >= 1
+            if (number % 10 > 0) { result += numUni(number % 10); }
+        }
+
+        return result.isEmpty() ? null : result;
+    }
+
+    protected static String numCentinaia(int number){
+        String result = "";
 
         // num == 1000
-        if (num == 1000) System.out.printf("M");
+        if(number == 1000) { return "M"; }
 
         // 999 >= num >= 900
-        else if (num / 900 >= 1){
-            System.out.printf("CM");
-            numDec(num - 900);
+        else if (number / 900 >= 1) {
+            result += "CM";
+
+            // 99 >= num >= 1
+            if (number % 100 > 0) {
+                result += numDecine(number % 100);
+            }
         }
 
         // 899 >= num >= 500
-        else if(num/500>=1){
-            System.out.printf("D");
+        else if(number / 500 >= 1){
+            result += "D";
 
-            num_cent_rest = num - 500;
+            for (int i = 1; i <= (number - 500) / 100; i++) { result += "C"; }
 
-            for (int i = 1; i <= num_cent_rest / 100; i++) System.out.printf("C");
-
-            num_dec = num%100;
-
-            numDec(num_dec);
+            // 9 >= num >= 1
+            if (number % 100 > 0) { result += numDecine(number % 100); }
         }
 
-        // 499 >= num >= 100
-        else if(num/100>=1){
-            // 499 >= num >= 400
-            if (num / 400 >= 1) {
-                System.out.printf("CD");
-                numDec(num - 400);
-            }
+        // 499 >= num >= 400
+        else if (number / 400 >= 1) {
+            result += "CD";
 
+            // 99 >= num >= 1
+            if (number % 100 > 0) {
+                result += numDecine(number % 100);
+            }
+        }
+
+        // 399 >= num >= 1
+        else {
             // 399 >= num >= 100
-            else {
-                num_cent_rest = num / 100;
-                for (int i = 1; i <= num_cent_rest; i++) System.out.printf("C");
-                numDec(num % 100);
-            }
+            for (int i = 1; i <= number / 100; i++) { result += "C"; }
+
+            // 9 >= num >= 1
+            if (number % 100 > 0) { result += numDecine(number % 100); }
         }
 
-        // 99 >= num >= 1
-        else numDec(num);
+        return result.isEmpty() ? null : result;
     }
 
-    public static void numDec(int num_dec){
-         //System.out.printf("  Dec:");
-         int num_dec_rest = 0;
-         int num_uni = 0;
+    public static String convert(int number) {
+        String result = "";
 
-        // 99 >= num_dec >= 90
-         if (num_dec / 90 >= 1){
-            System.out.printf("XC");
-            numUni(num_dec - 90);
-         }
+        if(number > 1000 || number < 1) { return null; }
 
-         // 99 >= num_dec >= 50
-         else if(num_dec/50>=1) {
-             System.out.printf("L");
+        result += numCentinaia(number);
 
-             num_dec_rest = num_dec - 50;
-
-             for (int i = 1; i <= num_dec_rest / 10; i++) System.out.printf("X");
-
-             numUni(num_dec % 10);
-         }
-
-         // 49 >= num_dec >= 10
-         else if(num_dec/10>=1){
-             
-			 // 49 >= num >= 40
-             if (num_dec / 40 >= 1) {
-                 System.out.printf("XL");
-                 numUni(num_dec - 40);
-             }
-
-             // 39 >= num >= 10
-             else {
-                 for (int i = 1; i <= num_dec / 10; i++) System.out.printf("X");
-                 numUni(num_dec % 10);
-             }
-         }
-
-         else numUni(num_dec);
+        return result.isEmpty() ? null : result;
     }
 
-    public static void numUni(int num_uni){
-        //System.out.printf("  Uni:");
-        switch (num_uni){
-            case (1): System.out.printf("I"); break;
-            case (2): System.out.printf("II"); break;
-            case (3): System.out.printf("III"); break;
-            case (4): System.out.printf("IV"); break;
-            case (5): System.out.printf("V"); break;
-            case (6): System.out.printf("VI"); break;
-            case (7): System.out.printf("VII"); break;
-            case (8): System.out.printf("VIII"); break;
-            case (9): System.out.printf("IX"); break;
-        }
-    }
-
-    public static void stampaInFile() {
-        /*try {
-            File file = new File("C:\\Users\\NADIYA\\Desktop\\all_num.txt");
-
-            if(!file.exists()) file.createNewFile();
-            PrintWriter pw = new PrintWriter(file);
-        */
-            for (int i = 1; i < 1001; i++) {
-                //pw.println(i);
-                System.out.printf(i+" = ");
-                numCent(i);
-                System.out.printf(" \n");
-            }
-        /*
-            pw.close();
-        }
-
-        catch (IOException e){
-            System.out.printf("ERRORE CON FILE:" + e);
-        }
-        */
-    }
-	
 }
+
+
+
+
