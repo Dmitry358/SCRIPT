@@ -380,6 +380,16 @@ public class IntegerToRomanTest{
     }
 
     @Test
+    public void testConvert_ConInputOttocentootantaotto() {
+        String expected = "DCCCLXXXVIII";
+        int number = 888;
+
+        String result = convert(number);
+
+        assertTrue(expected.equals(result));
+    }
+
+    @Test
     public void testConvert_ConInputOttocentootantanove() {
         String expected = "DCCCLXXXIX";
         int number = 889;
@@ -408,6 +418,8 @@ public class IntegerToRomanTest{
 
         assertTrue(expected.equals(result));
     }
+
+
 
     @Test
     public void testConvert_ConInputNovecentootantanove() {
