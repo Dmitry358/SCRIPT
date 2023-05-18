@@ -1,22 +1,25 @@
 - !!!!!!! SISTEMARE CACHING GITHUB ACTIONS
-
+??? eliminare cartella ".github/badges"
 - &kill_cache=1 aggiungere per badge
 
 - !!! TOGLIERE COMMENTI !!!
-- !!!!! da 20 NON TESTO UNI
+!! perche fa doppio ACTION su commit iniziale?
+!!!!!!!! DA SISTEMARE .GITIGNORE ( IDEA ecc.)
+
+- da prvare far fallire tutti tst di checkstyle
 
 - !!!! SISTEMARE DOPPIO COMMIT INIZIALE
 - DA RIVEDERE FILES VERSIONE 3 (perchè ho fatto coppia dalla versione 6, però copia iniziale dovrebbero essere a posto
-- da prvare far fallire tutti tst di checkstyle
+
 ????? REALIZZARE il controllo di ordine permesso ?????
-!!!!!!!!!!!! DA REALIZZARE "testPrint_ConInputLettera()" nel "RomanPrinterTest" e 
+
 "testConvert_ConInputLettera()" nel "IntegerToRomainTest" e CON LETTERA E SPAZIO!!!!!!
-!!!!!!!! DA SISTEMARE .GITIGNORE ( IDEA ecc.)
+
 !!!! ATTIVARE COVERALLS IN LOCALE
 !!!! AGGIUNGERE COVERALLS IN REMOTO
-!!!! CACHING MAVEN ACTIONS
+
 !!!! SISTEMARE ETICHETTA CHECKSTYLE NEL README.MD
-!! mettere "CLOSE #ID" nei commits
+
 1. aggiungere??   <failOnViolation>true</failOnViolation>   nel checkstyle.xml?
-!! perche fa doppio ACTION su commit iniziale?
-??? eliminare cartella ".github/badges"
+
+
