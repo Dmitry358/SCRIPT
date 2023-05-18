@@ -1,3 +1,5 @@
+!!!!! FATTO POCHI TEST SU romanPRINTER da versione 500
+
 - !!!!!!! SISTEMARE CACHING GITHUB ACTIONS
 ??? eliminare cartella ".github/badges"
 - &kill_cache=1 aggiungere per badge
